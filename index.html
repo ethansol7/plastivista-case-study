@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="PlastiVista case study: a circular manufacturing system connecting waste collection, shredding, extrusion, recycled filament, 3D printing, and designed products."
+    />
+    <title>PlastiVista Case Study</title>
+    <link rel="icon" href="assets/plastivista-mark.png" />
+    <link rel="preload" as="image" href="assets/system-hero.jpg" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="PlastiVista case study home">
+        <span class="brand-mark">
+          <img src="assets/plastivista-mark.png" alt="" />
+        </span>
+        <span>
+          <strong>PlastiVista</strong>
+          <small>Portfolio case study</small>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Case study sections">
+        <a href="#overview">Overview</a>
+        <a href="#system">System</a>
+        <a href="#hardware">Hardware</a>
+        <a href="#electronics">Controls</a>
+        <a href="#materials">Materials</a>
+        <a href="#sol">Sol Seven</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero section-pad" id="top">
+        <div class="hero-copy reveal">
+          <p class="section-label">Circular manufacturing infrastructure</p>
+          <h1>PlastiVista</h1>
+          <p class="hero-subtitle">
+            A circular manufacturing system turning plastic waste into designed products.
+          </p>
+          <p class="hero-intro">
+            PlastiVista connects waste collection, shredding, extrusion, filament production,
+            3D printing, and product design into one local material loop. It is the
+            system layer behind Sol Seven Studios: part recycling workflow, part
+            fabrication platform, and part design thesis about what circular production
+            can feel like at human scale.
+          </p>
+        </div>
+        <figure class="hero-media media-card reveal delay-1">
+          <img
+            src="assets/system-hero.jpg"
+            alt="Circular PlastiVista system graphic connecting printed products, shredding, extrusion, filament, and 3D printing."
+          />
+          <figcaption>
+            A designed material loop connecting recycled plastic, filament making, 3D printing,
+            and product output.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="overview section-pad" id="overview">
+        <div class="section-heading reveal">
+          <p class="section-label">Project overview</p>
+          <h2>Designing the system behind the object.</h2>
+        </div>
+        <div class="overview-grid">
+          <article class="info-card reveal">
+            <span>Role</span>
+            <p>
+              Industrial design, system design, prototyping, fabrication, electronics,
+              and coding.
+            </p>
+          </article>
+          <article class="info-card reveal delay-1">
+            <span>Tools and processes</span>
+            <p>
+              3D printing, shredding, extrusion, recycled filament, CAD, electronics,
+              Arduino/control systems, and documentation.
+            </p>
+          </article>
+          <article class="info-card reveal delay-2">
+            <span>Output</span>
+            <p>
+              A circular production system connected to Sol Seven Studios, translating
+              waste and failed prints into usable material for designed products.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="split section-pad" id="problem">
+        <div class="section-copy reveal">
+          <p class="section-label">The problem</p>
+          <h2>Plastic waste is treated like a logistics problem, but designers meet it as a material problem.</h2>
+          <p>
+            Failed prints, purge material, support structures, packaging, and offcuts
+            often leave the studio as low-value waste. Traditional recycling systems
+            are centralized, opaque, and disconnected from the decisions that create
+            waste in the first place.
+          </p>
+          <p>
+            PlastiVista reframes that gap. Instead of sending material away and hoping
+            it becomes useful again, the project keeps the material visible inside the
+            design process. Waste becomes inventory. Failed prints become feedstock.
+            Material mistakes become tests that can move back through the system.
+          </p>
+        </div>
+        <figure class="media-card reveal delay-1">
+          <img
+            src="assets/plastic-waste.jpg"
+            alt="Clear container filled with shredded and mixed plastic pieces."
+          />
+          <figcaption>
+            Plastic waste and failed prints treated as usable feedstock rather than the
+            end of the process.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="system section-pad" id="system">
+        <div class="section-heading center reveal">
+          <p class="section-label">The system</p>
+          <h2>A local loop for circular production.</h2>
+          <p>
+            The project maps a complete material path from collection to product and
+            back again. Each step is both a machine interaction and a design decision.
+          </p>
+        </div>
+
+        <div class="flow-diagram reveal delay-1" aria-label="Waste to shred to extrude to filament to print to product to reprocess">
+          <div class="flow-step">
+            <span>01</span>
+            <strong>Waste</strong>
+            <small>Failed prints, scraps, and plastic offcuts enter the loop.</small>
+          </div>
+          <div class="flow-step">
+            <span>02</span>
+            <strong>Shred</strong>
+            <small>Material is reduced into consistent flakes for processing.</small>
+          </div>
+          <div class="flow-step">
+            <span>03</span>
+            <strong>Extrude</strong>
+            <small>Flakes are heated, pushed, and stabilized into a continuous line.</small>
+          </div>
+          <div class="flow-step">
+            <span>04</span>
+            <strong>Filament</strong>
+            <small>Recycled material becomes printable stock for the studio.</small>
+          </div>
+          <div class="flow-step">
+            <span>05</span>
+            <strong>Print</strong>
+            <small>Parts, tests, and products move from CAD into physical form.</small>
+          </div>
+          <div class="flow-step">
+            <span>06</span>
+            <strong>Product</strong>
+            <small>Sol Seven Studios becomes the visible expression of the loop.</small>
+          </div>
+          <div class="flow-step">
+            <span>07</span>
+            <strong>Reprocess</strong>
+            <small>Offcuts and failed tests return to the beginning.</small>
+          </div>
+        </div>
+
+        <figure class="wide-media reveal delay-2">
+          <img
+            src="assets/system-diagram-art.jpg"
+            alt="PlastiVista circular system visualization with lamps, shredder, extruder, filament spool, and printer."
+          />
+          <figcaption>
+            The full loop as a product ecosystem: material recovery, machine workflow,
+            filament production, printing, and designed output.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="hardware section-pad" id="hardware">
+        <div class="section-heading reveal">
+          <p class="section-label">Hardware and fabrication</p>
+          <h2>Built as infrastructure, not just a presentation model.</h2>
+          <p>
+            PlastiVista was developed through physical fabrication: metal hardware,
+            3D printed parts, machine enclosures, extrusion tests, wiring, and shop-floor
+            iteration. The project lives in the gap between industrial design language
+            and real fabrication constraints.
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+          <figure class="media-card large reveal">
+            <img
+              src="assets/finished-machine.jpg"
+              alt="Finished PlastiVista machine enclosure with touchscreen and orange handles."
+            />
+            <figcaption>
+              Finished machine enclosure integrating controls, ventilation, access,
+              and a calmer product-facing form.
+            </figcaption>
+          </figure>
+          <figure class="media-card reveal delay-1">
+            <img
+              src="assets/extruder-table.jpg"
+              alt="Extrusion setup on a workbench with a filament spool, motor, and bench hardware."
+            />
+            <figcaption>
+              Extrusion and winding setup arranged for testing material flow and filament control.
+            </figcaption>
+          </figure>
+          <figure class="media-card reveal delay-2">
+            <img
+              src="assets/shredder-body.jpg"
+              alt="Shredder housing and blade assembly mounted in a fabricated frame."
+            />
+            <figcaption>
+              Shredder assembly housed inside the fabrication frame before final closure.
+            </figcaption>
+          </figure>
+          <figure class="media-card reveal">
+            <img
+              src="assets/hardware-components-layout.jpg"
+              alt="Shredder motor, control box, gears, fasteners, and hardware laid out on a white surface."
+            />
+            <figcaption>
+              Component layout used to understand the mechanical package, drive system,
+              and serviceable parts.
+            </figcaption>
+          </figure>
+          <figure class="media-card reveal delay-1">
+            <img
+              src="assets/machine-enclosure-open.jpg"
+              alt="Open PlastiVista machine enclosure showing internal electronics and workspace."
+            />
+            <figcaption>
+              Interior access during fabrication, balancing serviceability with a cleaner exterior shell.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="electronics section-pad" id="electronics">
+        <div class="section-copy reveal">
+          <p class="section-label">Electronics and control</p>
+          <h2>The engineering layer makes the loop repeatable.</h2>
+          <p>
+            The system depends on control more than appearance. Motors, relays, power
+            delivery, heat control, switches, and interface decisions determine whether
+            material can be processed consistently enough to become product-grade stock.
+          </p>
+          <p>
+            This layer turns PlastiVista from a concept image into working infrastructure:
+            a machine that can be started, tuned, observed, repaired, and improved.
+          </p>
+          <div class="detail-list">
+            <article>
+              <span>Temperature logic</span>
+              <p>Heat and extrusion behavior are treated as a controlled material process.</p>
+            </article>
+            <article>
+              <span>Power and safety</span>
+              <p>Relays, switches, fans, and power routing shape the system's reliability.</p>
+            </article>
+            <article>
+              <span>Interface layer</span>
+              <p>A touchscreen and physical controls make the machine legible during use.</p>
+            </article>
+          </div>
+        </div>
+        <div class="control-grid">
+          <figure class="media-card reveal delay-1">
+            <img
+              src="assets/electronics-bench.jpg"
+              alt="Open electronics enclosure with wiring, power supply, and control components on a workbench."
+            />
+            <figcaption>
+              Wiring and control hardware during bench assembly.
+            </figcaption>
+          </figure>
+          <figure class="media-card reveal delay-2">
+            <img
+              src="assets/relay-starter-close.jpg"
+              alt="Close-up of relay and starter wiring inside the control system."
+            />
+            <figcaption>
+              Relay, starter, and power routing details inside the control box.
+            </figcaption>
+          </figure>
+          <figure class="media-card reveal">
+            <img
+              src="assets/touchscreen-control.jpg"
+              alt="Touchscreen control interface mounted on the PlastiVista machine."
+            />
+            <figcaption>
+              Touchscreen control interface embedded into the machine body.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="materials section-pad" id="materials">
+        <div class="section-heading reveal">
+          <p class="section-label">Material testing</p>
+          <h2>Experiments, failed prints, and usable material.</h2>
+          <p>
+            The material story is intentionally process-driven. PlastiVista treats each
+            failed print, shred size, extrusion attempt, and print test as feedback for
+            the next pass through the loop.
+          </p>
+        </div>
+
+        <div class="testing-layout">
+          <figure class="media-card reveal">
+            <img
+              src="assets/failed-prints-bin.jpg"
+              alt="Bin containing failed prints, plastic scraps, and parts ready to be reprocessed."
+            />
+            <figcaption>
+              Failed prints and plastic scraps collected before being broken down.
+            </figcaption>
+          </figure>
+          <figure class="media-card tall reveal delay-1">
+            <img
+              src="assets/plastic-flakes-hand.jpg"
+              alt="Hand holding shredded plastic flakes above a bin of processed material."
+            />
+            <figcaption>
+              Shredded flakes make the waste stream measurable, handleable, and ready
+              for extrusion tests.
+            </figcaption>
+          </figure>
+          <figure class="media-card reveal delay-2">
+            <img
+              src="assets/filament-spool.jpg"
+              alt="Recycled filament wound onto a spool."
+            />
+            <figcaption>
+              Filament output as the bridge between recycled feedstock and printable product parts.
+            </figcaption>
+          </figure>
+          <figure class="media-card reveal">
+            <img
+              src="assets/recycled-print-test.jpg"
+              alt="Small black 3D printed chair test part made from recycled material."
+            />
+            <figcaption>
+              A small print test showing recycled material returning to designed form.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="sol-connection section-pad" id="sol">
+        <div class="callout reveal">
+          <p>PlastiVista powers the material loop behind Sol Seven Studios.</p>
+        </div>
+        <div class="split compact">
+          <div class="section-copy reveal">
+            <p class="section-label">Connection to Sol Seven Studios</p>
+            <h2>Sol is the product-facing expression. PlastiVista is the infrastructure.</h2>
+            <p>
+              Sol Seven Studios focuses on lamps, modularity, product language, and
+              human factors. PlastiVista sits underneath that work as the circular
+              manufacturing system that makes the material story operational.
+            </p>
+            <p>
+              Together, they form a complete portfolio narrative: not only what the
+              product looks like, but how it can be made, remade, repaired, and returned
+              to a loop.
+            </p>
+          </div>
+          <figure class="media-card reveal delay-1">
+            <img
+              src="assets/system-environment-b.jpg"
+              alt="Person standing with PlastiVista system equipment, filament, and lamps in a studio environment."
+            />
+            <figcaption>
+              The material system in context with the product studio it supports.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="vision section-pad" id="vision">
+        <div class="vision-panel reveal">
+          <div>
+            <p class="section-label">Final outcome and vision</p>
+            <h2>Local circular manufacturing as a design language.</h2>
+            <p>
+              PlastiVista proposes a scalable model for studios, schools, and small
+              manufacturers that want more control over their material loop. The value
+              is not only environmental. It is creative, educational, and infrastructural:
+              design decisions become connected to material consequences.
+            </p>
+            <p>
+              The project closes the distance between design, engineering, and fabrication.
+              It shows that circularity can be built into the workflow, not added as a
+              claim after the product is finished.
+            </p>
+          </div>
+          <figure>
+            <img
+              src="assets/founder-system.jpg"
+              alt="Designer standing beside the PlastiVista system and Sol lamp prototypes."
+            />
+          </figure>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <img src="assets/plastivista-mark.png" alt="" />
+        <p>Design the product. Build the system. Fully circular.</p>
+      </div>
+      <a href="#top">Back to top</a>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
