@@ -124,6 +124,7 @@
     ["#electronics", "hardware"],
     ["#materials", "material"],
     ["#sol", "output"],
+    ["#digital", "output"],
     ["#vision", "vision"]
   ];
 
