@@ -768,6 +768,32 @@
       <span data-sound-label>Sound On</span>
     </button>
 
+    <div
+      class="lightbox"
+      data-lightbox
+      role="dialog"
+      aria-modal="true"
+      aria-label="Image viewer"
+      aria-hidden="true"
+      hidden
+    >
+      <button class="lightbox-close" type="button" data-lightbox-close aria-label="Close image viewer">
+        X
+      </button>
+      <button class="lightbox-nav lightbox-prev" type="button" data-lightbox-prev aria-label="Previous image">
+        &lt;
+      </button>
+      <div class="lightbox-stage" data-lightbox-stage>
+        <figure class="lightbox-figure">
+          <img data-lightbox-image alt="" />
+          <figcaption data-lightbox-caption hidden></figcaption>
+        </figure>
+      </div>
+      <button class="lightbox-nav lightbox-next" type="button" data-lightbox-next aria-label="Next image">
+        &gt;
+      </button>
+    </div>
+
     <footer class="site-footer">
       <div>
         <img src="media/plastivista-mark.png" alt="" />
