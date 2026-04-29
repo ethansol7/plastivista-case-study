@@ -27,18 +27,19 @@
       </a>
       <nav class="site-nav" aria-label="Case study sections">
         <a href="#overview">Overview</a>
+        <a href="#context">Context</a>
         <a href="#system">System</a>
-        <a href="#hardware">Hardware</a>
-        <a href="#electronics">Controls</a>
-        <a href="#materials">Materials</a>
-        <a href="#sol">Sol Seven</a>
+        <a href="#ideation">Ideation</a>
+        <a href="#hardware">Build</a>
+        <a href="#materials">Testing</a>
+        <a href="#vision">Vision</a>
       </nav>
     </header>
 
     <main id="main">
       <section class="hero section-pad" id="top">
         <div class="hero-copy reveal">
-          <p class="section-label">Circular manufacturing infrastructure</p>
+          <p class="section-label">Industrial design case study</p>
           <h1>PlastiVista</h1>
           <p class="hero-subtitle">
             A circular manufacturing system turning plastic waste into designed products.
@@ -46,10 +47,15 @@
           <p class="hero-intro">
             PlastiVista connects waste collection, shredding, extrusion, filament production,
             3D printing, and product design into one local material loop. It is the
-            system layer behind Sol Seven Studios: part recycling workflow, part
-            fabrication platform, and part design thesis about what circular production
-            can feel like at human scale.
+            system layer behind Sol Seven Studios: the infrastructure that lets material,
+            hardware, electronics, and designed objects belong to the same story.
           </p>
+          <div class="hero-facts" aria-label="Project facts">
+            <span>System design</span>
+            <span>Fabrication</span>
+            <span>Controls</span>
+            <span>Recycled filament</span>
+          </div>
         </div>
         <figure class="hero-media media-card reveal delay-1">
           <img
@@ -57,79 +63,144 @@
             alt="Circular PlastiVista system graphic connecting printed products, shredding, extrusion, filament, and 3D printing."
           />
           <figcaption>
-            A designed material loop connecting recycled plastic, filament making, 3D printing,
-            and product output.
+            The project frames recycling as an active studio workflow: waste enters,
+            material is processed, and new products return from the loop.
           </figcaption>
         </figure>
       </section>
 
       <section class="overview section-pad" id="overview">
-        <div class="section-heading reveal">
-          <p class="section-label">Project overview</p>
-          <h2>Designing the system behind the object.</h2>
+        <div class="chapter-heading reveal">
+          <span class="chapter-number">00</span>
+          <div>
+            <p class="section-label">Project overview</p>
+            <h2>Designing the system behind the object.</h2>
+            <p>
+              Sol Seven Studios shows the product-facing result. PlastiVista shows the
+              machinery, material decisions, and control logic that make that result
+              circular instead of symbolic.
+            </p>
+          </div>
         </div>
         <div class="overview-grid">
           <article class="info-card reveal">
             <span>Role</span>
             <p>
               Industrial design, system design, prototyping, fabrication, electronics,
-              and coding.
+              coding, and documentation.
             </p>
           </article>
           <article class="info-card reveal delay-1">
             <span>Tools and processes</span>
             <p>
-              3D printing, shredding, extrusion, recycled filament, CAD, electronics,
-              Arduino/control systems, and documentation.
+              CAD, 3D printing, shredding, extrusion, recycled filament, Arduino/control
+              systems, wiring, material testing, and capstone book development.
             </p>
           </article>
           <article class="info-card reveal delay-2">
             <span>Output</span>
             <p>
-              A circular production system connected to Sol Seven Studios, translating
-              waste and failed prints into usable material for designed products.
+              A local circular production system connected to Sol Seven Studios, turning
+              failed prints and plastic scraps into usable material for designed products.
             </p>
           </article>
         </div>
       </section>
 
-      <section class="split section-pad" id="problem">
+      <section class="chapter split section-pad" id="context">
         <div class="section-copy reveal">
-          <p class="section-label">The problem</p>
-          <h2>Plastic waste is treated like a logistics problem, but designers meet it as a material problem.</h2>
+          <span class="chapter-number">01</span>
+          <p class="section-label">Context</p>
+          <h2>The plastic problem becomes visible inside the studio.</h2>
           <p>
             Failed prints, purge material, support structures, packaging, and offcuts
-            often leave the studio as low-value waste. Traditional recycling systems
-            are centralized, opaque, and disconnected from the decisions that create
-            waste in the first place.
+            often leave the studio as low-value waste. Centralized recycling systems are
+            distant from the design decisions that create the waste in the first place.
           </p>
           <p>
-            PlastiVista reframes that gap. Instead of sending material away and hoping
-            it becomes useful again, the project keeps the material visible inside the
-            design process. Waste becomes inventory. Failed prints become feedstock.
-            Material mistakes become tests that can move back through the system.
+            PlastiVista starts from a simple observation: the waste stream is not only
+            an environmental issue. It is also a design material, a logistics problem,
+            and a missed opportunity for local manufacturing.
           </p>
+          <div class="problem-solution">
+            <article>
+              <span>Problem</span>
+              <p>Waste disappears from the process before designers can learn from it.</p>
+            </article>
+            <article>
+              <span>Opportunity</span>
+              <p>Keep material close enough to be measured, processed, tested, and reused.</p>
+            </article>
+          </div>
         </div>
         <figure class="media-card reveal delay-1">
           <img
-            src="assets/plastic-waste.jpg"
-            alt="Clear container filled with shredded and mixed plastic pieces."
+            src="assets/book-problem-spread.jpg"
+            alt="Capstone book spread introducing the PlastiVista problem with plastic waste, a lamp, printer, and material pile."
           />
           <figcaption>
-            Plastic waste and failed prints treated as usable feedstock rather than the
-            end of the process.
+            The capstone book opened the PlastiVista story by placing the product,
+            printer, and waste stream in the same visual field.
           </figcaption>
         </figure>
       </section>
 
-      <section class="system section-pad" id="system">
-        <div class="section-heading center reveal">
-          <p class="section-label">The system</p>
-          <h2>A local loop for circular production.</h2>
+      <section class="insight section-pad">
+        <div class="quote-panel reveal">
+          <p class="section-label">Insight</p>
+          <blockquote>
+            Waste is not the end of the process. It is local manufacturing material.
+          </blockquote>
           <p>
-            The project maps a complete material path from collection to product and
-            back again. Each step is both a machine interaction and a design decision.
+            That shift changed the project from a product-only exploration into a full
+            material pipeline: a system for recovering value before it leaves the studio.
           </p>
+        </div>
+        <div class="story-board">
+          <figure class="media-card reveal">
+            <img
+              src="assets/systemic-sustainability.jpg"
+              alt="Early visual system graphic connecting a lamp, user, furniture, and recycling node."
+            />
+            <figcaption>
+              Early systems thinking mapped product, user, and recycling node as one
+              connected experience.
+            </figcaption>
+          </figure>
+          <figure class="media-card reveal delay-1">
+            <img
+              src="assets/book-plastic-story-spread.jpg"
+              alt="Capstone book spread explaining plastic story, material degradation, purity, reinforcement, and processing behavior."
+            />
+            <figcaption>
+              Material research pushed the project toward cleaner streams, known inputs,
+              and controlled processing instead of generic recycling claims.
+            </figcaption>
+          </figure>
+          <figure class="media-card reveal delay-2">
+            <img
+              src="assets/book-plastic-systems-spread.jpg"
+              alt="Capstone book spread comparing current plastic systems with the proposed PlastiVista system."
+            />
+            <figcaption>
+              The proposed system connected product, processor, and direct material
+              feedback into a smaller circular workflow.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="system section-pad" id="system">
+        <div class="chapter-heading center reveal">
+          <span class="chapter-number">02</span>
+          <div>
+            <p class="section-label">System concept</p>
+            <h2>A local loop for circular production.</h2>
+            <p>
+              The core system maps a complete material path from collection to product
+              and back again. Each step is both a machine interaction and a design decision.
+            </p>
+          </div>
         </div>
 
         <div class="flow-diagram reveal delay-1" aria-label="Waste to shred to extrude to filament to print to product to reprocess">
@@ -172,26 +243,230 @@
 
         <figure class="wide-media reveal delay-2">
           <img
-            src="assets/system-diagram-art.jpg"
-            alt="PlastiVista circular system visualization with lamps, shredder, extruder, filament spool, and printer."
+            src="assets/book-system-introduction-spread.jpg"
+            alt="Capstone book spread introducing the PlastiVista system with waste, shredder, extruder, filament, printer, lamp, and circular arrows."
           />
           <figcaption>
-            The full loop as a product ecosystem: material recovery, machine workflow,
-            filament production, printing, and designed output.
+            Book spread showing the full loop as a product ecosystem: material recovery,
+            machine workflow, filament production, printing, and designed output.
           </figcaption>
         </figure>
+
+        <div class="timeline reveal">
+          <article>
+            <span>Collect</span>
+            <p>Start with a controlled local stream so material quality is knowable.</p>
+          </article>
+          <article>
+            <span>Process</span>
+            <p>Shred and extrude with repeatable settings rather than one-off experiments.</p>
+          </article>
+          <article>
+            <span>Validate</span>
+            <p>Print samples, track failures, and feed the learning back into the system.</p>
+          </article>
+          <article>
+            <span>Express</span>
+            <p>Turn the material loop into products people can understand and keep.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="ideation section-pad" id="ideation">
+        <div class="chapter-heading reveal">
+          <span class="chapter-number">03</span>
+          <div>
+            <p class="section-label">Divergent exploration</p>
+            <h2>From product ideas to a circular manufacturing platform.</h2>
+            <p>
+              The early work tested multiple directions: product forms, service models,
+              reward systems, machine layouts, and exhibition formats. The project became
+              stronger when the focus moved from a single product to the infrastructure
+              that could make many products possible.
+            </p>
+          </div>
+        </div>
+
+        <div class="ideation-mosaic">
+          <figure class="media-card reveal">
+            <img
+              src="assets/book-where-started-spread.jpg"
+              alt="Capstone book spread showing early sketchbook ideation and where the project started."
+            />
+            <figcaption>
+              Early sketches tested product typologies, modular forms, and the first
+              questions that eventually led to the system architecture.
+            </figcaption>
+          </figure>
+          <figure class="media-card reveal delay-1">
+            <img
+              src="assets/book-ideation-spread.jpg"
+              alt="Capstone book spread describing ideation with chair sketches and system direction."
+            />
+            <figcaption>
+              The project moved through multiple output directions before the material
+              loop became the strongest organizing idea.
+            </figcaption>
+          </figure>
+          <figure class="media-card reveal delay-2">
+            <img
+              src="assets/book-design-direction-spread.jpg"
+              alt="Capstone book spread outlining design direction and visual language."
+            />
+            <figcaption>
+              Design criteria clarified the visual language: controlled geometry,
+              visible material identity, modularity, and industrial restraint.
+            </figcaption>
+          </figure>
+          <figure class="media-card reveal">
+            <img
+              src="assets/early-filament-recycler.jpg"
+              alt="Early graphic concept for a compact filament recycler."
+            />
+            <figcaption>
+              A compact recycler concept helped define the machine as a designed object,
+              not only shop equipment.
+            </figcaption>
+          </figure>
+          <figure class="media-card reveal delay-1">
+            <img
+              src="assets/capstone-floorplan-slide.jpg"
+              alt="Capstone booth floor plan showing the physical walkthrough of the circular journey."
+            />
+            <figcaption>
+              Layout studies treated the capstone presentation as a walkthrough of the
+              circular journey.
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="decision-grid">
+          <article class="decision-card reveal">
+            <span>Decision 01</span>
+            <h3>Prioritize the material loop.</h3>
+            <p>
+              The system needed to show how waste becomes stock, not simply claim that
+              a product is recycled.
+            </p>
+          </article>
+          <article class="decision-card reveal delay-1">
+            <span>Decision 02</span>
+            <h3>Make machines legible.</h3>
+            <p>
+              Shredding, heating, winding, and control had to feel visible enough for
+              viewers to understand the transformation.
+            </p>
+          </article>
+          <article class="decision-card reveal delay-2">
+            <span>Decision 03</span>
+            <h3>Let the product carry the proof.</h3>
+            <p>
+              Sol Seven Studios became the consumer-facing output, while PlastiVista
+              stayed focused on the infrastructure behind the material.
+            </p>
+          </article>
+        </div>
       </section>
 
       <section class="hardware section-pad" id="hardware">
-        <div class="section-heading reveal">
-          <p class="section-label">Hardware and fabrication</p>
-          <h2>Built as infrastructure, not just a presentation model.</h2>
-          <p>
-            PlastiVista was developed through physical fabrication: metal hardware,
-            3D printed parts, machine enclosures, extrusion tests, wiring, and shop-floor
-            iteration. The project lives in the gap between industrial design language
-            and real fabrication constraints.
-          </p>
+        <div class="chapter-heading reveal">
+          <span class="chapter-number">04</span>
+          <div>
+            <p class="section-label">Hardware build</p>
+            <h2>Building the material pipeline from shredder to filament.</h2>
+            <p>
+              PlastiVista was developed through physical fabrication: metal hardware,
+              3D printed parts, machine enclosures, extrusion tests, wiring, and
+              shop-floor iteration. The project lives between industrial design language
+              and real fabrication constraints.
+            </p>
+          </div>
+        </div>
+
+        <figure class="wide-media reveal">
+          <img
+            src="assets/book-production-system-spread.jpg"
+            alt="Capstone book spread titled Production System with shredded plastic, filament spool, printed parts, and chair."
+          />
+          <figcaption>
+            The production system became the central story: waste, filament, printed
+            components, and product output arranged as one material sequence.
+          </figcaption>
+        </figure>
+
+        <div class="model-feature reveal" id="model">
+          <div class="model-copy">
+            <p class="section-label">Interactive shredder model</p>
+            <h3>The shredder is the first mechanical decision in the loop.</h3>
+            <p>
+              Before plastic can become filament, it has to become predictable feedstock.
+              The shredder reduces failed prints and scraps into flakes that can be
+              handled, sorted, stored, and sent into extrusion.
+            </p>
+            <p>
+              Orbit the model to inspect the material-processing package: housing,
+              motor placement, enclosure language, and access points that support the
+              larger pipeline.
+            </p>
+          </div>
+          <figure class="model-shell">
+            <div
+              class="model-stage"
+              data-shredder-viewer
+              data-model-src="assets/shredder-system.glb"
+              aria-label="Interactive 3D model of the PlastiVista shredder"
+            >
+              <div class="model-status" data-model-status>Loading 3D shredder model</div>
+            </div>
+            <figcaption>
+              Interactive 3D model of the shredder, part of PlastiVista's material
+              processing system for turning plastic scraps into usable feedstock.
+            </figcaption>
+          </figure>
+        </div>
+
+        <figure class="wide-media reveal">
+          <img
+            src="assets/book-process-spread.jpg"
+            alt="Capstone book process spread showing hands assembling electronics and fabrication components."
+          />
+          <figcaption>
+            Process documentation from the capstone book showing the build as hands-on
+            engineering and fabrication work, not only a visual concept.
+          </figcaption>
+        </figure>
+
+        <div class="book-sequence">
+          <figure class="media-card reveal">
+            <img
+              src="assets/book-shredder-overview-spread.jpg"
+              alt="Capstone book spread showing shredder overview with a rendered shredder system."
+            />
+            <figcaption>
+              Shredder overview spread: the first stage turns irregular waste into a
+              predictable input for the rest of the line.
+            </figcaption>
+          </figure>
+          <figure class="media-card reveal delay-1">
+            <img
+              src="assets/book-shredder-process-spread.jpg"
+              alt="Capstone book spread showing shredder process photos and fabrication steps."
+            />
+            <figcaption>
+              Process spread documenting the physical build, from wooden layout studies
+              to mounted blade and enclosure assemblies.
+            </figcaption>
+          </figure>
+          <figure class="media-card reveal delay-2">
+            <img
+              src="assets/book-final-shredder-spread.jpg"
+              alt="Capstone book spread showing the final shredder from two angles."
+            />
+            <figcaption>
+              Final shredder spread showing the completed processing node as a designed
+              machine with service access and clear interaction points.
+            </figcaption>
+          </figure>
         </div>
 
         <div class="gallery-grid">
@@ -201,26 +476,26 @@
               alt="Finished PlastiVista machine enclosure with touchscreen and orange handles."
             />
             <figcaption>
-              Finished machine enclosure integrating controls, ventilation, access,
-              and a calmer product-facing form.
+              Finished enclosure integrating controls, ventilation, access, and a calmer
+              product-facing form.
             </figcaption>
           </figure>
           <figure class="media-card reveal delay-1">
-            <img
-              src="assets/extruder-table.jpg"
-              alt="Extrusion setup on a workbench with a filament spool, motor, and bench hardware."
-            />
-            <figcaption>
-              Extrusion and winding setup arranged for testing material flow and filament control.
-            </figcaption>
-          </figure>
-          <figure class="media-card reveal delay-2">
             <img
               src="assets/shredder-body.jpg"
               alt="Shredder housing and blade assembly mounted in a fabricated frame."
             />
             <figcaption>
               Shredder assembly housed inside the fabrication frame before final closure.
+            </figcaption>
+          </figure>
+          <figure class="media-card reveal delay-2">
+            <img
+              src="assets/extruder-table.jpg"
+              alt="Extrusion setup on a workbench with a filament spool, motor, and bench hardware."
+            />
+            <figcaption>
+              Extrusion and winding setup arranged for testing material flow and filament control.
             </figcaption>
           </figure>
           <figure class="media-card reveal">
@@ -247,6 +522,7 @@
 
       <section class="electronics section-pad" id="electronics">
         <div class="section-copy reveal">
+          <span class="chapter-number">05</span>
           <p class="section-label">Electronics and control</p>
           <h2>The engineering layer makes the loop repeatable.</h2>
           <p>
@@ -276,14 +552,25 @@
         <div class="control-grid">
           <figure class="media-card reveal delay-1">
             <img
-              src="assets/electronics-bench.jpg"
-              alt="Open electronics enclosure with wiring, power supply, and control components on a workbench."
+              src="assets/book-extruder-overview-spread.jpg"
+              alt="Capstone book spread showing an extruder overview with hopper, auger, heater, and control components."
             />
             <figcaption>
-              Wiring and control hardware during bench assembly.
+              Extruder overview spread: shredded plastic is heated, moved, and formed
+              into a continuous output for the printing workflow.
             </figcaption>
           </figure>
           <figure class="media-card reveal delay-2">
+            <img
+              src="assets/book-extruder-process-spread.jpg"
+              alt="Capstone book spread showing extruder process photos and electronics assembly."
+            />
+            <figcaption>
+              Extruder process spread showing mechanical layout, control wiring, and
+              fabrication decisions moving toward a usable machine.
+            </figcaption>
+          </figure>
+          <figure class="media-card reveal">
             <img
               src="assets/relay-starter-close.jpg"
               alt="Close-up of relay and starter wiring inside the control system."
@@ -292,7 +579,7 @@
               Relay, starter, and power routing details inside the control box.
             </figcaption>
           </figure>
-          <figure class="media-card reveal">
+          <figure class="media-card reveal delay-1">
             <img
               src="assets/touchscreen-control.jpg"
               alt="Touchscreen control interface mounted on the PlastiVista machine."
@@ -305,27 +592,41 @@
       </section>
 
       <section class="materials section-pad" id="materials">
-        <div class="section-heading reveal">
-          <p class="section-label">Material testing</p>
-          <h2>Experiments, failed prints, and usable material.</h2>
-          <p>
-            The material story is intentionally process-driven. PlastiVista treats each
-            failed print, shred size, extrusion attempt, and print test as feedback for
-            the next pass through the loop.
-          </p>
+        <div class="chapter-heading reveal">
+          <span class="chapter-number">06</span>
+          <div>
+            <p class="section-label">Material testing</p>
+            <h2>Experiments, failed prints, and usable material.</h2>
+            <p>
+              The material story is intentionally process-driven. PlastiVista treats each
+              failed print, shred size, extrusion attempt, and print test as feedback for
+              the next pass through the loop.
+            </p>
+          </div>
         </div>
 
         <div class="testing-layout">
           <figure class="media-card reveal">
             <img
-              src="assets/failed-prints-bin.jpg"
-              alt="Bin containing failed prints, plastic scraps, and parts ready to be reprocessed."
+              src="assets/book-shredding-input-spread.jpg"
+              alt="Capstone book spread showing material input for shredding with failed prints and scraps."
             />
             <figcaption>
-              Failed prints and plastic scraps collected before being broken down.
+              Material input spread: failed prints, supports, and scraps become the
+              measurable starting point for the loop.
             </figcaption>
           </figure>
-          <figure class="media-card tall reveal delay-1">
+          <figure class="media-card reveal delay-1">
+            <img
+              src="assets/book-material-processing-spread.jpg"
+              alt="Capstone book spread showing material processing through shredding and flake handling."
+            />
+            <figcaption>
+              Material processing spread showing shredding, flake handling, and the
+              preparation of plastic for extrusion.
+            </figcaption>
+          </figure>
+          <figure class="media-card tall reveal delay-2">
             <img
               src="assets/plastic-flakes-hand.jpg"
               alt="Hand holding shredded plastic flakes above a bin of processed material."
@@ -335,22 +636,23 @@
               for extrusion tests.
             </figcaption>
           </figure>
-          <figure class="media-card reveal delay-2">
+          <figure class="media-card reveal">
             <img
-              src="assets/filament-spool.jpg"
-              alt="Recycled filament wound onto a spool."
+              src="assets/book-filament-print-spread.jpg"
+              alt="Capstone book spread showing recycled filament on a spool and a printed chair test."
             />
             <figcaption>
-              Filament output as the bridge between recycled feedstock and printable product parts.
+              Filament-to-print spread showing recycled stock returning to a physical
+              product test.
             </figcaption>
           </figure>
-          <figure class="media-card reveal">
+          <figure class="media-card reveal delay-1">
             <img
               src="assets/recycled-print-test.jpg"
               alt="Small black 3D printed chair test part made from recycled material."
             />
             <figcaption>
-              A small print test showing recycled material returning to designed form.
+              A print test showing recycled material returning to designed form.
             </figcaption>
           </figure>
         </div>
@@ -362,7 +664,8 @@
         </div>
         <div class="split compact">
           <div class="section-copy reveal">
-            <p class="section-label">Connection to Sol Seven Studios</p>
+            <span class="chapter-number">07</span>
+            <p class="section-label">Product output</p>
             <h2>Sol is the product-facing expression. PlastiVista is the infrastructure.</h2>
             <p>
               Sol Seven Studios focuses on lamps, modularity, product language, and
@@ -375,23 +678,37 @@
               to a loop.
             </p>
           </div>
-          <figure class="media-card reveal delay-1">
-            <img
-              src="assets/system-environment-b.jpg"
-              alt="Person standing with PlastiVista system equipment, filament, and lamps in a studio environment."
-            />
-            <figcaption>
-              The material system in context with the product studio it supports.
-            </figcaption>
-          </figure>
+          <div class="sol-visuals">
+            <figure class="media-card reveal delay-1">
+              <img
+                src="assets/three-pillars-slide.jpg"
+                alt="Capstone slide showing three pillars: Sol lamp, PlastiVista recycler, and capstone booth."
+              />
+              <figcaption>
+                The project was organized as three linked outputs: product, recycling
+                node, and public walkthrough.
+              </figcaption>
+            </figure>
+            <figure class="media-card reveal delay-2">
+              <img
+                src="assets/sol-plastivista-bridge-slide.jpg"
+                alt="Slide describing PlastiVista and Sol Seven Studios as circular design through local manufacturing."
+              />
+              <figcaption>
+                The bridge between Sol and PlastiVista clarified which work was product
+                design and which work was manufacturing infrastructure.
+              </figcaption>
+            </figure>
+          </div>
         </div>
       </section>
 
       <section class="vision section-pad" id="vision">
         <div class="vision-panel reveal">
           <div>
+            <span class="chapter-number">08</span>
             <p class="section-label">Final outcome and vision</p>
-            <h2>Local circular manufacturing as a design language.</h2>
+            <h2>Distributed local circular manufacturing.</h2>
             <p>
               PlastiVista proposes a scalable model for studios, schools, and small
               manufacturers that want more control over their material loop. The value
@@ -406,9 +723,41 @@
           </div>
           <figure>
             <img
-              src="assets/founder-system.jpg"
-              alt="Designer standing beside the PlastiVista system and Sol lamp prototypes."
+              src="assets/book-vision-spread.jpg"
+              alt="Capstone book vision spread showing distributed circular manufacturing nodes and products."
             />
+          </figure>
+        </div>
+        <div class="future-grid">
+          <figure class="media-card reveal">
+            <img
+              src="assets/book-system-strategy-spread.jpg"
+              alt="Capstone book system strategy spread showing distributed production and system value."
+            />
+            <figcaption>
+              System strategy spread: local nodes recover, process, and output products
+              without separating material value from design value.
+            </figcaption>
+          </figure>
+          <figure class="media-card reveal delay-1">
+            <img
+              src="assets/book-distributed-system-spread.jpg"
+              alt="Capstone book spread comparing a centralized system with a distributed local system."
+            />
+            <figcaption>
+              Centralized versus distributed system spread: PlastiVista imagines material
+              recovery closer to where waste is created.
+            </figcaption>
+          </figure>
+          <figure class="media-card reveal delay-2">
+            <img
+              src="assets/book-exhibition-spread.jpg"
+              alt="Capstone book spread showing the final exhibition setup with PlastiVista and Sol Seven Studios products."
+            />
+            <figcaption>
+              Final exhibition spread showing the material infrastructure beside the
+              product studio it supports.
+            </figcaption>
           </figure>
         </div>
       </section>
@@ -422,6 +771,15 @@
       <a href="#top">Back to top</a>
     </footer>
 
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.164.1/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.164.1/examples/jsm/"
+        }
+      }
+    </script>
     <script src="main.js"></script>
+    <script type="module" src="shredder-viewer.js"></script>
   </body>
 </html>

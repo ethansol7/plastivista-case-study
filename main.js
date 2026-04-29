@@ -40,3 +40,14 @@ const activeObserver = new IntersectionObserver(
 );
 
 sections.forEach((section) => activeObserver.observe(section));
+
+window.addEventListener("load", () => {
+  if (!window.location.hash) return;
+  const target = document.querySelector(window.location.hash);
+  if (!target) return;
+  window.setTimeout(() => {
+    target.scrollIntoView({ block: "start", behavior: "auto" });
+    revealItems.forEach((item) => item.classList.add("is-visible"));
+    target.querySelectorAll(".reveal").forEach((item) => item.classList.add("is-visible"));
+  }, 120);
+});
