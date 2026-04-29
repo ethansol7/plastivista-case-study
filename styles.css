@@ -32,6 +32,7 @@ html {
 
 body {
   margin: 0;
+  overflow-x: clip;
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(247, 250, 245, 0.9) 42%, var(--page-deep)),
     var(--page);
@@ -76,6 +77,7 @@ p {
   color: var(--forest-soft);
   font-size: 1rem;
   line-height: 1.82;
+  overflow-wrap: break-word;
 }
 
 h1,
@@ -236,6 +238,26 @@ h3 {
   grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr);
   padding-top: 5rem;
   padding-bottom: 5rem;
+}
+
+.hero > *,
+.split > *,
+.electronics > *,
+.model-feature > *,
+.vision-panel > *,
+.overview-grid > *,
+.story-board > *,
+.flow-diagram > *,
+.timeline > *,
+.ideation-mosaic > *,
+.decision-grid > *,
+.gallery-grid > *,
+.build-sequence > *,
+.control-grid > *,
+.testing-layout > *,
+.sol-visuals > *,
+.future-grid > * {
+  min-width: 0;
 }
 
 .hero-subtitle {
@@ -480,15 +502,15 @@ figcaption {
   object-fit: cover;
 }
 
-.media-card img[src*="book-"],
-.wide-media img[src*="book-"] {
+.media-card img[src*="case-"],
+.wide-media img[src*="case-"] {
   background: #f7faf5;
   object-fit: contain;
 }
 
-.story-board img[src*="book-"],
-.ideation-mosaic img[src*="book-"],
-.future-grid img[src*="book-"] {
+.story-board img[src*="case-"],
+.ideation-mosaic img[src*="case-"],
+.future-grid img[src*="case-"] {
   aspect-ratio: 16 / 10;
   object-fit: contain;
 }
@@ -559,7 +581,7 @@ figcaption {
   object-fit: cover;
 }
 
-.wide-media img[src*="book-"] {
+.wide-media img[src*="case-"] {
   aspect-ratio: 16 / 10;
   object-fit: contain;
 }
@@ -680,14 +702,14 @@ figcaption {
   margin-top: 2rem;
 }
 
-.book-sequence {
+.build-sequence {
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   margin-top: 2rem;
 }
 
-.book-sequence img {
+.build-sequence img {
   aspect-ratio: 16 / 10;
   object-fit: contain;
 }
@@ -747,7 +769,7 @@ figcaption {
   aspect-ratio: 1 / 1.12;
 }
 
-.control-grid img[src*="book-"] {
+.control-grid img[src*="case-"] {
   aspect-ratio: 16 / 10;
   object-fit: contain;
 }
@@ -777,7 +799,7 @@ figcaption {
   aspect-ratio: 3 / 4;
 }
 
-.testing-layout img[src*="book-"] {
+.testing-layout img[src*="case-"] {
   height: auto;
   aspect-ratio: 16 / 10;
   object-fit: contain;
@@ -828,7 +850,7 @@ figcaption {
   object-fit: cover;
 }
 
-.vision-panel img[src*="book-"] {
+.vision-panel img[src*="case-"] {
   aspect-ratio: 16 / 10;
   object-fit: contain;
   background: #f7faf5;
@@ -867,6 +889,63 @@ figcaption {
 .site-footer p {
   color: var(--stone);
   font-size: 0.96rem;
+}
+
+.sound-toggle {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 140;
+  display: inline-flex;
+  min-height: 46px;
+  align-items: center;
+  gap: 0.62rem;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.78);
+  color: var(--forest);
+  padding: 0.62rem 0.9rem;
+  font: inherit;
+  font-size: 0.88rem;
+  font-weight: 600;
+  box-shadow: 0 16px 48px rgba(40, 72, 49, 0.12);
+  cursor: pointer;
+  backdrop-filter: blur(18px);
+  transition:
+    transform 240ms var(--ease),
+    border-color 240ms var(--ease),
+    background 240ms var(--ease);
+}
+
+.sound-toggle:hover {
+  transform: translateY(-2px);
+  border-color: rgba(25, 61, 43, 0.28);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.sound-toggle:focus-visible {
+  outline: 2px solid var(--moss);
+  outline-offset: 4px;
+}
+
+.sound-indicator {
+  display: block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgba(100, 113, 102, 0.42);
+  transition:
+    background 240ms var(--ease),
+    box-shadow 240ms var(--ease);
+}
+
+.sound-toggle.is-on .sound-indicator {
+  background: var(--moss);
+  box-shadow: 0 0 0 7px rgba(168, 192, 112, 0.18);
+}
+
+.sound-toggle[hidden] {
+  display: none;
 }
 
 .reveal {
@@ -926,7 +1005,7 @@ figcaption {
 
   .story-board,
   .timeline,
-  .book-sequence,
+  .build-sequence,
   .future-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1018,7 +1097,7 @@ figcaption {
 
   .story-board,
   .timeline,
-  .book-sequence,
+  .build-sequence,
   .future-grid,
   .flow-diagram,
   .control-grid,
@@ -1061,6 +1140,14 @@ figcaption {
     align-items: flex-start;
     flex-direction: column;
     padding-inline: 1rem;
+  }
+
+  .sound-toggle {
+    right: 0.9rem;
+    bottom: 0.9rem;
+    min-height: 42px;
+    padding: 0.55rem 0.78rem;
+    font-size: 0.82rem;
   }
 }
 
