@@ -43,7 +43,9 @@ sections.forEach((section) => activeObserver.observe(section));
 
 window.addEventListener("load", () => {
   if (!window.location.hash) return;
-  const target = document.querySelector(window.location.hash);
+  let target;
+  try { target = document.getElementById(decodeURIComponent(window.location.hash.slice(1))); }
+  catch { return; }
   if (!target) return;
   window.setTimeout(() => {
     target.scrollIntoView({ block: "start", behavior: "auto" });
@@ -71,6 +73,7 @@ if (lightbox && lightboxImage && lightboxCaption && lightboxStage && lightboxClo
   });
 
   let activeIndex = -1;
+  let visibleIndexes = [];
   let lastFocusedElement = null;
   let savedScrollY = 0;
   let closeTimer = 0;
@@ -89,7 +92,7 @@ if (lightbox && lightboxImage && lightboxCaption && lightboxStage && lightboxClo
   };
 
   const updateNavState = () => {
-    const disabled = lightboxItems.length < 2;
+    const disabled = visibleIndexes.length < 2;
     lightboxPrev.disabled = disabled;
     lightboxNext.disabled = disabled;
   };
@@ -116,6 +119,7 @@ if (lightbox && lightboxImage && lightboxCaption && lightboxStage && lightboxClo
   const openLightbox = (index) => {
     window.clearTimeout(closeTimer);
     lastFocusedElement = document.activeElement;
+    visibleIndexes = lightboxItems.flatMap(({ image }, i) => image.getClientRects().length ? [i] : []);
     setLightboxImage(index);
     setPageScrollLock(true);
     lightbox.hidden = false;
@@ -143,9 +147,10 @@ if (lightbox && lightboxImage && lightboxCaption && lightboxStage && lightboxClo
   };
 
   const showRelativeImage = (direction) => {
-    if (activeIndex < 0 || lightboxItems.length < 2) return;
-    const nextIndex = (activeIndex + direction + lightboxItems.length) % lightboxItems.length;
-    setLightboxImage(nextIndex);
+    if (activeIndex < 0 || visibleIndexes.length < 2) return;
+    const position = visibleIndexes.indexOf(activeIndex);
+    const nextIndex = (position + direction + visibleIndexes.length) % visibleIndexes.length;
+    setLightboxImage(visibleIndexes[nextIndex]);
   };
 
   lightboxItems.forEach((item, index) => {
@@ -171,6 +176,14 @@ if (lightbox && lightboxImage && lightboxCaption && lightboxStage && lightboxClo
 
   window.addEventListener("keydown", (event) => {
     if (lightbox.hidden) return;
+
+    if (event.key === "Tab") {
+      event.preventDefault();
+      const controls = [lightboxClose, lightboxPrev, lightboxNext].filter(button => !button.disabled);
+      const position = controls.indexOf(document.activeElement);
+      const step = event.shiftKey ? -1 : 1;
+      controls[(position + step + controls.length) % controls.length].focus();
+    }
 
     if (event.key === "Escape") {
       event.preventDefault();
