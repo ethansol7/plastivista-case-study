@@ -9,68 +9,96 @@
     />
     <title>PlastiVista Case Study</title>
     <link rel="icon" href="media/plastivista-mark.png" />
-    <link rel="preload" as="image" href="media/system-hero.jpg" />
+    <link rel="preload" as="image" href="media/chair-field-000.jpg" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="editorial.css" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
 
-    <header class="site-header">
-      <a class="brand" href="#top" aria-label="PlastiVista case study home">
-        <span class="brand-mark">
-          <img src="media/plastivista-mark.png" alt="" />
-        </span>
-        <span>
-          <strong>PlastiVista</strong>
-          <small>Portfolio case study</small>
-        </span>
-      </a>
-      <nav class="site-nav" aria-label="Case study sections">
-        <a href="#overview">Overview</a>
-        <a href="#context">Context</a>
-        <a href="#system">System</a>
-        <a href="#ideation">Ideation</a>
-        <a href="#hardware">Build</a>
-        <a href="#materials">Testing</a>
-        <a href="#digital">Digital</a>
-        <a href="#vision">Vision</a>
+    <header class="edition-header" id="top">
+      <a href="#top" class="edition-brand"><span class="edition-brand-dot" aria-hidden="true"></span> Sol Seven Studios</a>
+      <nav aria-label="Case study navigation">
+        <a href="#process">Process</a>
+        <a href="#result">Result</a>
+        <a href="#technical-record">Technical record</a>
       </nav>
     </header>
 
     <main id="main">
-      <section class="hero section-pad" id="top">
-        <div class="hero-copy reveal">
-          <p class="section-label">Industrial design case study</p>
-          <h1>PlastiVista</h1>
-          <p class="hero-subtitle">
-            A circular manufacturing system turning plastic waste into designed products.
-          </p>
-          <p class="hero-intro">
-            PlastiVista connects waste collection, shredding, extrusion, filament production,
-            3D printing, and product design into one local material loop. It is the
-            system layer behind Sol Seven Studios: the infrastructure that lets material,
-            hardware, electronics, and designed objects belong to the same story.
-          </p>
-          <div class="hero-facts" aria-label="Project facts">
-            <span>System design</span>
-            <span>Fabrication</span>
-            <span>Controls</span>
-            <span>Recycled filament</span>
+      <article class="edition">
+        <div class="edition-folio"><span>Volume 01<br>PlastiVista</span><span>Industrial design<br>Capstone · 2026</span></div>
+        <section class="edition-hero" aria-labelledby="edition-title">
+          <div class="edition-hero-copy">
+            <span class="edition-marker" aria-hidden="true">01</span>
+            <h1 id="edition-title">PlastiVista</h1>
+            <p class="edition-deck">From discarded prints<br class="edition-wide-break"> to new products.</p>
+            <p>I designed and built a small production system that turns plastic shop waste into filament for 3D printing. I tested the material in print and used a full scale chair to test what changes when a part has to support a person.</p>
+            <a class="edition-link" href="#process">Follow the material <span aria-hidden="true">↓</span></a>
           </div>
-          <p class="patent-note">Patent Pending</p>
-        </div>
-        <figure class="hero-media media-card reveal delay-1">
-          <img
-            src="media/system-hero.jpg"
-            alt="Circular PlastiVista system graphic connecting printed products, shredding, extrusion, filament, and 3D printing."
-          />
-          <figcaption>
-            The project frames recycling as an active studio workflow: waste enters,
-            material is processed, and new products return from the loop.
-          </figcaption>
-        </figure>
-      </section>
+          <figure class="edition-cover">
+            <img src="media/chair-field-000.jpg" width="1200" height="1521" fetchpriority="high" alt="Ethan sitting on his full scale white Revo chair outdoors">
+            <figcaption><span>Fig. 01</span> Revo chair at full scale</figcaption>
+          </figure>
+        </section>
 
+        <section class="edition-role" aria-label="Project roles">
+          <div><strong>Designed</strong><span>Material loop and Revo chair</span></div>
+          <div><strong>Built</strong><span>Shredder and filament extrusion setup</span></div>
+          <div><strong>Tested</strong><span>Reclaimed filament and chair performance</span></div>
+        </section>
+
+        <section class="edition-process" id="process" aria-labelledby="process-title">
+          <div class="edition-kicker"><span>02</span> Production system</div>
+          <h2 id="process-title">Follow the material.</h2>
+          <p class="edition-intro">Each stage had to work with the output of the previous one. Select a stage to see the hardware, the material, and what changed along the way.</p>
+          <div class="edition-stage-switch" data-stage-switch>
+            <div class="edition-stage-nav" aria-label="Production stages">
+              <a href="#stage-collect" data-stage-link><span>01</span>Collect</a>
+              <a href="#stage-shred" data-stage-link><span>02</span>Shred</a>
+              <a href="#stage-extrude" data-stage-link><span>03</span>Extrude</a>
+              <a href="#stage-print" data-stage-link><span>04</span>Print</a>
+            </div>
+            <div class="edition-stages">
+              <section class="edition-stage" id="stage-collect">
+                <figure><img src="media/failed-prints-bin.jpg" loading="lazy" decoding="async" alt="Discarded prints and fabrication scraps in the shop collection bin"></figure>
+                <div><span class="edition-note">Material input</span><h3>Start in the shop.</h3><p>I collected failed prints and offcuts from the fabrication lab. That gave me a local source I could sort and work with instead of treating mixed plastic as one material.</p><a class="edition-link" href="#context">See the material context <span aria-hidden="true">↗</span></a></div>
+              </section>
+              <section class="edition-stage" id="stage-shred">
+                <figure><img src="media/shredded-output.jpg" loading="lazy" decoding="async" alt="Shredded plastic collected below the shredder assembly"></figure>
+                <div><span class="edition-note">Material preparation</span><h3>Make feedstock.</h3><p>I built a shredder to break discarded parts into flakes and checked what came out before moving on to extrusion. The output needed to feed steadily through the hopper.</p><a class="edition-link" href="#hardware">See the shredder build <span aria-hidden="true">↗</span></a></div>
+              </section>
+              <section class="edition-stage" id="stage-extrude">
+                <figure><img src="media/extruder-front.jpg" loading="lazy" decoding="async" alt="Filament extruder prototype assembled on the workbench"></figure>
+                <div><span class="edition-note">Filament production</span><h3>Control the strand.</h3><p>The auger sets the rate at which material moves through the heated barrel. The puller controls the strand diameter. I had to tune both together to produce filament that could print.</p><a class="edition-link" href="#materials">See the material tests <span aria-hidden="true">↗</span></a></div>
+              </section>
+              <section class="edition-stage" id="stage-print">
+                <figure><img src="media/recycled-print-test.jpg" loading="lazy" decoding="async" alt="Dark printed chair form made as a recycled filament test"></figure>
+                <div><span class="edition-note">Printed output</span><h3>Print the geometry.</h3><p>On April 11, 2026, I produced the chair form using filament made entirely from reclaimed lab plastic. It showed the loop could make a printable part. The full scale chair tests answered a different question: how the form behaves under load.</p><a class="edition-link" href="#result">See what the chair taught me <span aria-hidden="true">↓</span></a></div>
+              </section>
+            </div>
+          </div>
+        </section>
+
+        <section class="edition-result" id="result" aria-labelledby="result-title">
+          <div class="edition-result-copy">
+            <div class="edition-kicker"><span>03</span> Testing the chair</div>
+            <h2 id="result-title">The shell does the work.</h2>
+            <p>I printed the first full scale chair to test proportion, ergonomics, and stability beyond the scale models. The main structure stayed stable in use, but the sides deformed slightly and stress collected at the corners.</p>
+            <p>My next iteration would put more material into the walls and corner transitions rather than raising infill everywhere.</p>
+            <a class="edition-link" href="#technical-record">Open the technical record <span aria-hidden="true">↓</span></a>
+          </div>
+          <figure><img src="media/chair-iterations-000.jpg" loading="lazy" decoding="async" alt="Revo chair prototypes arranged in a row showing changes in material and geometry"><figcaption><span>Fig. 02</span> Revo chair iterations</figcaption></figure>
+        </section>
+      </article>
+
+      <details class="edition-record" id="technical-record">
+        <summary><span class="edition-record-number">04</span><span><strong>Technical record</strong><small>Build details, test images, and the interactive shredder model</small></span><span class="edition-record-control" aria-hidden="true"></span></summary>
+        <nav class="edition-record-nav" aria-label="Technical sections">
+          <a href="#overview">Overview</a><a href="#context">Context</a><a href="#system">System</a><a href="#ideation">Ideation</a><a href="#hardware">Build</a><a href="#electronics">Controls</a><a href="#materials">Testing</a><a href="#digital">Digital</a><a href="#vision">Vision</a>
+          <button class="edition-audio" type="button" data-sound-toggle aria-pressed="false"><span data-sound-label>Sound On</span></button>
+        </nav>
+        <div class="edition-record-body">
       <section class="overview section-pad" id="overview">
         <div class="chapter-heading reveal">
           <span class="chapter-number">00</span>
@@ -136,7 +164,7 @@
           </div>
         </div>
         <figure class="media-card reveal delay-1">
-          <img
+          <img loading="lazy" decoding="async"
             src="media/case-problem-context.jpg"
             alt="Problem framing graphic showing plastic waste, product output, printing, and the material loop as one connected design challenge."
           />
@@ -160,7 +188,7 @@
         </div>
         <div class="story-board">
           <figure class="media-card reveal">
-            <img
+            <img loading="lazy" decoding="async"
               src="media/case-system-map.jpg"
               alt="Early visual system graphic connecting a lamp, user, furniture, and recycling node."
             />
@@ -170,7 +198,7 @@
             </figcaption>
           </figure>
           <figure class="media-card reveal delay-1">
-            <img
+            <img loading="lazy" decoding="async"
               src="media/case-plastic-behavior.jpg"
               alt="Material behavior study showing degradation, purity, reinforcement, and processing variables for recycled plastic."
             />
@@ -180,7 +208,7 @@
             </figcaption>
           </figure>
           <figure class="media-card reveal delay-2">
-            <img
+            <img loading="lazy" decoding="async"
               src="media/case-system-comparison.jpg"
               alt="System comparison graphic contrasting distant recycling with a local PlastiVista manufacturing loop."
             />
@@ -244,7 +272,7 @@
         </div>
 
         <figure class="wide-media reveal delay-2">
-          <img
+          <img loading="lazy" decoding="async"
             src="media/case-system-loop.jpg"
             alt="Circular system diagram connecting waste, shredding, extrusion, filament, printing, product output, and reprocessing."
           />
@@ -291,7 +319,7 @@
 
         <div class="ideation-mosaic">
           <figure class="media-card reveal">
-            <img
+            <img loading="lazy" decoding="async"
               src="media/case-early-sketch-map.jpg"
               alt="Early sketch exploration testing furniture forms, modular connections, and material-efficient structures."
             />
@@ -301,7 +329,7 @@
             </figcaption>
           </figure>
           <figure class="media-card reveal delay-1">
-            <img
+            <img loading="lazy" decoding="async"
               src="media/case-divergent-ideation.jpg"
               alt="Ideation panel showing chair studies, system logic, and the move from single products toward repeatable structures."
             />
@@ -311,7 +339,7 @@
             </figcaption>
           </figure>
           <figure class="media-card reveal delay-2">
-            <img
+            <img loading="lazy" decoding="async"
               src="media/case-design-direction.jpg"
               alt="Design direction panel defining controlled geometry, visible material identity, modularity, and industrial restraint."
             />
@@ -321,7 +349,7 @@
             </figcaption>
           </figure>
           <figure class="media-card reveal">
-            <img
+            <img loading="lazy" decoding="async"
               src="media/case-early-filament-recycler.jpg"
               alt="Early graphic concept for a compact filament recycler."
             />
@@ -331,7 +359,7 @@
             </figcaption>
           </figure>
           <figure class="media-card reveal delay-1">
-            <img
+            <img loading="lazy" decoding="async"
               src="media/case-exhibition-layout.jpg"
               alt="Spatial layout study showing the circular journey from material input to product output."
             />
@@ -386,7 +414,7 @@
         </div>
 
         <figure class="wide-media reveal">
-          <img
+          <img loading="lazy" decoding="async"
             src="media/case-production-system.jpg"
             alt="Production system composition showing shredded plastic, recycled filament, printed components, and product output."
           />
@@ -428,7 +456,7 @@
         </div>
 
         <figure class="wide-media reveal">
-          <img
+          <img loading="lazy" decoding="async"
             src="media/case-fabrication-process.jpg"
             alt="Hands-on fabrication process with electronics, fasteners, enclosure components, and control hardware on the workbench."
           />
@@ -440,7 +468,7 @@
 
         <div class="build-sequence">
           <figure class="media-card reveal">
-            <img
+            <img loading="lazy" decoding="async"
               src="media/case-shredder-overview.jpg"
               alt="Shredder overview showing the material-processing machine and its role in the circular production loop."
             />
@@ -450,7 +478,7 @@
             </figcaption>
           </figure>
           <figure class="media-card reveal delay-1">
-            <img
+            <img loading="lazy" decoding="async"
               src="media/case-shredder-development.jpg"
               alt="Shredder development showing fabrication steps, blade mounting, and enclosure assembly."
             />
@@ -460,7 +488,7 @@
             </figcaption>
           </figure>
           <figure class="media-card reveal delay-2">
-            <img
+            <img loading="lazy" decoding="async"
               src="media/case-shredder-final.jpg"
               alt="Final shredder shown from multiple angles as a designed processing node."
             />
@@ -473,7 +501,7 @@
 
         <div class="gallery-grid">
           <figure class="media-card large reveal">
-            <img
+            <img loading="lazy" decoding="async"
               src="media/finished-machine.jpg"
               alt="Finished PlastiVista machine enclosure with touchscreen and orange handles."
             />
@@ -483,7 +511,7 @@
             </figcaption>
           </figure>
           <figure class="media-card reveal delay-1">
-            <img
+            <img loading="lazy" decoding="async"
               src="media/shredder-body.jpg"
               alt="Shredder housing and blade assembly mounted in a fabricated frame."
             />
@@ -492,7 +520,7 @@
             </figcaption>
           </figure>
           <figure class="media-card reveal delay-2">
-            <img
+            <img loading="lazy" decoding="async"
               src="media/extruder-table.jpg"
               alt="Extrusion setup on a workbench with a filament spool, motor, and bench hardware."
             />
@@ -501,7 +529,7 @@
             </figcaption>
           </figure>
           <figure class="media-card reveal">
-            <img
+            <img loading="lazy" decoding="async"
               src="media/hardware-components-layout.jpg"
               alt="Shredder motor, control box, gears, fasteners, and hardware laid out on a white surface."
             />
@@ -511,7 +539,7 @@
             </figcaption>
           </figure>
           <figure class="media-card reveal delay-1">
-            <img
+            <img loading="lazy" decoding="async"
               src="media/machine-enclosure-open.jpg"
               alt="Open PlastiVista machine enclosure showing internal electronics and workspace."
             />
@@ -553,7 +581,7 @@
         </div>
         <div class="control-grid">
           <figure class="media-card reveal delay-1">
-            <img
+            <img loading="lazy" decoding="async"
               src="media/case-extruder-overview.jpg"
               alt="Extruder overview showing hopper, auger, heater, pulling system, and control components."
             />
@@ -563,7 +591,7 @@
             </figcaption>
           </figure>
           <figure class="media-card reveal delay-2">
-            <img
+            <img loading="lazy" decoding="async"
               src="media/case-extruder-development.jpg"
               alt="Extruder development showing mechanical layout, control wiring, and electronics assembly."
             />
@@ -573,7 +601,7 @@
             </figcaption>
           </figure>
           <figure class="media-card reveal">
-            <img
+            <img loading="lazy" decoding="async"
               src="media/relay-starter-close.jpg"
               alt="Close-up of relay and starter wiring inside the control system."
             />
@@ -582,7 +610,7 @@
             </figcaption>
           </figure>
           <figure class="media-card reveal delay-1">
-            <img
+            <img loading="lazy" decoding="async"
               src="media/touchscreen-control.jpg"
               alt="Touchscreen control interface mounted on the PlastiVista machine."
             />
@@ -609,7 +637,7 @@
 
         <div class="testing-layout">
           <figure class="media-card reveal">
-            <img
+            <img loading="lazy" decoding="async"
               src="media/case-material-input.jpg"
               alt="Failed prints, supports, and plastic scraps gathered as material input for the circular loop."
             />
@@ -619,7 +647,7 @@
             </figcaption>
           </figure>
           <figure class="media-card reveal delay-1">
-            <img
+            <img loading="lazy" decoding="async"
               src="media/case-material-processing.jpg"
               alt="Material processing through shredding, sorting, and flake handling."
             />
@@ -629,7 +657,7 @@
             </figcaption>
           </figure>
           <figure class="media-card tall reveal delay-2">
-            <img
+            <img loading="lazy" decoding="async"
               src="media/plastic-flakes-hand.jpg"
               alt="Hand holding shredded plastic flakes above a bin of processed material."
             />
@@ -639,7 +667,7 @@
             </figcaption>
           </figure>
           <figure class="media-card reveal">
-            <img
+            <img loading="lazy" decoding="async"
               src="media/case-filament-to-print.jpg"
               alt="Recycled filament on a spool beside a printed product test."
             />
@@ -649,7 +677,7 @@
             </figcaption>
           </figure>
           <figure class="media-card reveal delay-1">
-            <img
+            <img loading="lazy" decoding="async"
               src="media/recycled-print-test.jpg"
               alt="Small black 3D printed chair test part made from recycled material."
             />
@@ -682,7 +710,7 @@
           </div>
           <div class="sol-visuals">
             <figure class="media-card reveal delay-1">
-              <img
+              <img loading="lazy" decoding="async"
                 src="media/case-system-pillars.jpg"
                 alt="System diagram showing Sol Seven Studios, the PlastiVista recycler, and the public walkthrough as linked project outputs."
               />
@@ -692,7 +720,7 @@
               </figcaption>
             </figure>
             <figure class="media-card reveal delay-2">
-              <img
+              <img loading="lazy" decoding="async"
                 src="media/case-sol-bridge.jpg"
                 alt="Diagram connecting PlastiVista and Sol Seven Studios through local circular manufacturing."
               />
@@ -729,7 +757,7 @@
                 <span></span>
                 <small>Sol Seven Studios configurator</small>
               </div>
-              <img
+              <img loading="lazy" decoding="async"
                 src="media/digital-sol-seven-configurator.png"
                 alt="Live Sol Seven Studios configurator prototype showing modular lamp controls and product visualization."
               />
@@ -772,7 +800,7 @@
                 <span></span>
                 <small>PlastiVista system platform</small>
               </div>
-              <img
+              <img loading="lazy" decoding="async"
                 src="media/digital-plastivista-system.png"
                 alt="Live PlastiVista system site showing the circular manufacturing platform and waitlist path."
               />
@@ -828,7 +856,7 @@
             </p>
           </div>
           <figure>
-            <img
+            <img loading="lazy" decoding="async"
               src="media/case-distributed-vision.jpg"
               alt="Distributed circular manufacturing vision showing local production nodes and designed product outputs."
             />
@@ -836,7 +864,7 @@
         </div>
         <div class="future-grid">
           <figure class="media-card reveal">
-            <img
+            <img loading="lazy" decoding="async"
               src="media/case-system-strategy.jpg"
               alt="System strategy graphic showing local production nodes recovering material and producing designed products."
             />
@@ -846,7 +874,7 @@
             </figcaption>
           </figure>
           <figure class="media-card reveal delay-1">
-            <img
+            <img loading="lazy" decoding="async"
               src="media/case-distributed-local-system.jpg"
               alt="System diagram comparing centralized waste processing with distributed local manufacturing."
             />
@@ -856,7 +884,7 @@
             </figcaption>
           </figure>
           <figure class="media-card reveal delay-2">
-            <img
+            <img loading="lazy" decoding="async"
               src="media/case-final-exhibition.jpg"
               alt="Final setup showing PlastiVista material infrastructure beside Sol Seven Studios product output."
             />
@@ -867,12 +895,9 @@
           </figure>
         </div>
       </section>
+        </div>
+      </details>
     </main>
-
-    <button class="sound-toggle" type="button" data-sound-toggle aria-pressed="false">
-      <span class="sound-indicator" aria-hidden="true"></span>
-      <span data-sound-label>Sound On</span>
-    </button>
 
     <div
       class="lightbox"
@@ -904,7 +929,7 @@
       <div>
         <img src="media/plastivista-mark.png" alt="" />
         <div>
-          <p>Design the product. Build the system. Fully circular.</p>
+          <p>PlastiVista · Ethan Solodukhin</p>
           <p class="footer-legal">&copy; Sol Seven Studios. Patent Pending.</p>
         </div>
       </div>
@@ -919,6 +944,7 @@
         }
       }
     </script>
+    <script src="editorial.js"></script>
     <script src="main.js"></script>
     <script src="audio-journey.js"></script>
     <script type="module" src="shredder-viewer.js"></script>
