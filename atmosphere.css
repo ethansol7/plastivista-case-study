@@ -26,5 +26,7 @@ body.is-dark { --ink:#f2f0e9; --muted:#bcbdb6; --line:#50534d; --paper:#101314; 
 .ambient-status { position:absolute; right:0; bottom:calc(100% + 8px); background:#181c1d; color:white; padding:10px; width:230px; border-radius:4px }
 body:has(.image-viewer[open]) .ambient-controls { visibility:hidden }
 .is-embedded .ambient-controls { position:sticky; top:12px; bottom:auto; right:auto; width:fit-content; margin:0 var(--gutter,24px) 18px auto }
+.is-embedded .masthead .author { display:none }
+.is-embedded .masthead { justify-content:flex-end; min-height:56px }
 @media(max-width:600px) { .ambient-controls{right:16px;bottom:max(12px,env(safe-area-inset-bottom));font-size:11px}.ambient-controls button{padding-inline:10px}.ambient-volume{position:absolute;right:0;bottom:calc(100% + 8px);padding:0 14px;border:1px solid #b9bdb3;border-radius:5px;background:#f7f7f1;color:#171817}.is-dark .ambient-volume{background:#181c1d;color:#f2f0e9;border-color:#62665d}.ambient-volume input{width:110px} }
 @media print { #ambient-field,.ambient-controls{display:none}body.is-dark{background:white;color:black;--ink:black;--muted:#555;--line:#bbb} }
