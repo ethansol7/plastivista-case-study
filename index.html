@@ -1,926 +1,151 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="PlastiVista case study: a circular manufacturing system connecting waste collection, shredding, extrusion, recycled filament, 3D printing, and designed products."
-    />
-    <title>PlastiVista Case Study</title>
-    <link rel="icon" href="media/plastivista-mark.png" />
-    <link rel="preload" as="image" href="media/system-hero.jpg" />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <a class="skip-link" href="#main">Skip to content</a>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="description" content="PlastiVista by Ethan Solodukhin. A circular manufacturing system connecting plastic waste, fabrication and product design.">
+  <title>PlastiVista · Ethan Solodukhin</title>
+  <link rel="stylesheet" href="review.css"><link rel="stylesheet" href="case-study.css">
+  <script src="review.js" defer></script>
 
-    <header class="site-header">
-      <a class="brand" href="#top" aria-label="PlastiVista case study home">
-        <span class="brand-mark">
-          <img src="media/plastivista-mark.png" alt="" />
-        </span>
-        <span>
-          <strong>PlastiVista</strong>
-          <small>Portfolio case study</small>
-        </span>
-      </a>
-      <nav class="site-nav" aria-label="Case study sections">
-        <a href="#overview">Overview</a>
-        <a href="#context">Context</a>
-        <a href="#system">System</a>
-        <a href="#ideation">Ideation</a>
-        <a href="#hardware">Build</a>
-        <a href="#materials">Testing</a>
-        <a href="#digital">Digital</a>
-        <a href="#vision">Vision</a>
+
+
+
+
+<link rel="stylesheet" href="atmosphere.css?revision=06"><script src="atmosphere.js?revision=06" defer data-music-src="assets/ultra-chill-ambient.mp3"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="masthead wrap" id="top">
+    <a class="author" href="https://www.ethansolodukhin.com/" target="_top">Ethan Solodukhin</a>
+    <a class="record-link" href="technical.html#hardware" target="_blank" rel="noopener">Technical record <span aria-hidden="true">↗</span></a>
+  </header>
+  <main id="main">
+    <section class="opening wrap" aria-labelledby="project-title">
+      <div class="opening-type">
+        <h1 id="project-title">PlastiVista</h1>
+        <p class="project-deck">I developed a system that turns discarded 3D prints into usable filament.</p>
+      </div>
+      <figure class="exhibition">
+        <a class="image-button hero-image" href="image.html?view=exhibition" data-image="assets/exhibition-2600.webp" target="_blank" rel="noopener" data-enlarge aria-label="Enlarge the capstone exhibition photograph">
+          <picture>
+            <source media="(max-width: 600px)" srcset="assets/system-portrait.webp">
+            <img src="assets/exhibition-1600.webp" srcset="assets/exhibition-1600.webp 1600w, assets/exhibition-2600.webp 2600w" sizes="(min-width: 1600px) 1488px, 92vw" width="2600" height="1463" fetchpriority="high" alt="Ethan beside the PlastiVista shredder and Sol lighting collection.">
+          </picture>
+          <span class="enlarge-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 4H4v5m11-5h5v5M4 15v5h5m11-5v5h-5"/></svg>Enlarge image</span>
+        </a>
+      </figure>
+      <nav class="opening-summary section-links" aria-label="Project sections">
+        <a href="#material">Material <span aria-hidden="true">↓</span></a>
+        <a href="#shredder">Shredder <span aria-hidden="true">↓</span></a>
+        <a href="#extruder">Extruder <span aria-hidden="true">↓</span></a>
+        <a href="#first-print">First print <span aria-hidden="true">↓</span></a>
+        <a href="#sol">Sol <span aria-hidden="true">↓</span></a>
+        <a href="#digital">Digital prototypes <span aria-hidden="true">↓</span></a>
       </nav>
-    </header>
-
-    <main id="main">
-      <section class="hero section-pad" id="top">
-        <div class="hero-copy reveal">
-          <p class="section-label">Industrial design case study</p>
-          <h1>PlastiVista</h1>
-          <p class="hero-subtitle">
-            A circular manufacturing system turning plastic waste into designed products.
-          </p>
-          <p class="hero-intro">
-            PlastiVista connects waste collection, shredding, extrusion, filament production,
-            3D printing, and product design into one local material loop. It is the
-            system layer behind Sol Seven Studios: the infrastructure that lets material,
-            hardware, electronics, and designed objects belong to the same story.
-          </p>
-          <div class="hero-facts" aria-label="Project facts">
-            <span>System design</span>
-            <span>Fabrication</span>
-            <span>Controls</span>
-            <span>Recycled filament</span>
+    </section>
+<section class="chapter wrap" id="material" aria-labelledby="material-title">
+  <div class="section-head">
+    <h2 id="material-title">The material</h2>
+    <div class="chapter-copy"><p>I set up separate PLA and PETG collection bins at the RIT Fab Lab to recover failed prints and support material where they were being made. Keeping the plastics separate gave me a more controlled starting point for processing.</p><a class="text-link" href="image.html?view=collection" target="_blank" rel="noopener">View the collection setup <span aria-hidden="true">↗</span></a></div>
+  </div>
+  <div class="material-images"><figure><a class="image-button waste-image" href="image.html?view=waste" data-image="assets/waste.webp" target="_blank" rel="noopener" data-enlarge aria-label="Enlarge image: A collection bin filled with failed prints, support material and plastic scraps."><img src="assets/waste.webp" loading="lazy" decoding="async" alt="A collection bin filled with failed prints, support material and plastic scraps."><span class="enlarge-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 4H4v5m11-5h5v5M4 15v5h5m11-5v5h-5"/></svg>Enlarge image</span></a></figure><figure><a class="image-button flakes-image" href="image.html?view=flakes" data-image="assets/flakes.webp" target="_blank" rel="noopener" data-enlarge aria-label="Enlarge image: Shredded plastic flakes held above a collection bin."><img src="assets/flakes.webp" loading="lazy" decoding="async" alt="Shredded plastic flakes held above a collection bin."><span class="enlarge-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 4H4v5m11-5h5v5M4 15v5h5m11-5v5h-5"/></svg>Enlarge image</span></a></figure></div>
+  <p class="material-note">The shredder breaks the waste into flakes. I added a second grinding step to reduce particle size before feeding the extruder.</p>
+</section>
+    <section class="shredder wrap" id="shredder" aria-labelledby="shredder-title">
+      <div class="project-spread">
+        <div class="section-copy">
+          <h2 id="shredder-title">The shredder</h2>
+          <p class="section-intro">I assembled the enclosure from more than 45 printed panels to fit the available printer. Removable panels provide access to the motor, cutting mechanism and controls.</p>
+          <div class="view-selector" role="tablist" aria-label="Shredder images" aria-orientation="horizontal">
+            <button type="button" role="tab" id="tab-study" aria-controls="panel-study" aria-selected="true" data-view="study"><img src="assets/shredder-study.webp" alt="" width="120" height="84" loading="lazy"><span>Design study</span></button>
+            <button type="button" role="tab" id="tab-built" aria-controls="panel-built" aria-selected="false" tabindex="-1" data-view="built"><img src="assets/shredder-built.webp" alt="" width="120" height="84" loading="lazy"><span>Prototype</span></button>
+            <button type="button" role="tab" id="tab-open" aria-controls="panel-open" aria-selected="false" tabindex="-1" data-view="open"><img src="assets/shredder-open.webp" alt="" width="120" height="84" loading="lazy"><span>Interior</span></button>
           </div>
-          <p class="patent-note">Patent Pending</p>
+          <a class="action-link model-link" href="model.html" target="_blank" rel="noopener">Rotate the 3D model <span aria-hidden="true">↗</span></a><details class="technical-details">
+  <summary>Motor and controls</summary>
+  <div class="detail-content">
+    <figure><a class="image-button detail-image" href="image.html?view=components" data-image="assets/components.webp" target="_blank" rel="noopener" data-enlarge aria-label="Enlarge image: Motor, gear reducer, control unit and mechanical parts arranged before assembly."><img src="assets/components.webp" loading="lazy" decoding="async" alt="Motor, gear reducer, control unit and mechanical parts arranged before assembly."><span class="enlarge-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 4H4v5m11-5h5v5M4 15v5h5m11-5v5h-5"/></svg>Enlarge image</span></a></figure>
+    <p>A 1 hp motor drives the cutting mechanism through a gear reducer. An Arduino Uno and Nextion touchscreen provide the operating interface, including jam clearing profiles.</p>
+    <p>The assembly includes a magnetic starter and a dedicated shutoff switch. Removable magnetic panels give access to the components.</p>
+    <a href="image.html?view=touchscreen" target="_blank" rel="noopener">View the touchscreen <span aria-hidden="true">↗</span></a>
+  </div>
+</details>
         </div>
-        <figure class="hero-media media-card reveal delay-1">
-          <img
-            src="media/system-hero.jpg"
-            alt="Circular PlastiVista system graphic connecting printed products, shredding, extrusion, filament, and 3D printing."
-          />
-          <figcaption>
-            The project frames recycling as an active studio workflow: waste enters,
-            material is processed, and new products return from the loop.
-          </figcaption>
-        </figure>
-      </section>
-
-      <section class="overview section-pad" id="overview">
-        <div class="chapter-heading reveal">
-          <span class="chapter-number">00</span>
-          <div>
-            <p class="section-label">Project overview</p>
-            <h2>Designing the system behind the object.</h2>
-            <p>
-              Sol Seven Studios shows the product-facing result. PlastiVista shows the
-              machinery, material decisions, and control logic that make that result
-              circular instead of symbolic.
-            </p>
-          </div>
-        </div>
-        <div class="overview-grid">
-          <article class="info-card reveal">
-            <span>Role</span>
-            <p>
-              Industrial design, system design, prototyping, fabrication, electronics,
-              controls logic, and project storytelling.
-            </p>
-          </article>
-          <article class="info-card reveal delay-1">
-            <span>Tools and processes</span>
-            <p>
-              CAD, 3D printing, shredding, extrusion, recycled filament, Arduino-based
-              controls, wiring, enclosure design, and iterative material testing.
-            </p>
-          </article>
-          <article class="info-card reveal delay-2">
-            <span>Output</span>
-            <p>
-              A local circular production system connected to Sol Seven Studios, turning
-              failed prints and plastic scraps into usable material for designed products.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section class="chapter split section-pad" id="context">
-        <div class="section-copy reveal">
-          <span class="chapter-number">01</span>
-          <p class="section-label">Context</p>
-          <h2>The plastic problem becomes visible inside the studio.</h2>
-          <p>
-            Failed prints, purge material, support structures, packaging, and offcuts
-            often leave the studio as low-value waste. Centralized recycling systems are
-            distant from the design decisions that create the waste in the first place.
-          </p>
-          <p>
-            PlastiVista starts from a simple observation: the waste stream is not only
-            an environmental issue. It is also a design material, a logistics problem,
-            and a missed opportunity for local manufacturing.
-          </p>
-          <div class="problem-solution">
-            <article>
-              <span>Problem</span>
-              <p>Waste disappears from the process before designers can learn from it.</p>
-            </article>
-            <article>
-              <span>Opportunity</span>
-              <p>Keep material close enough to be measured, processed, tested, and reused.</p>
-            </article>
-          </div>
-        </div>
-        <figure class="media-card reveal delay-1">
-          <img
-            src="media/case-problem-context.jpg"
-            alt="Problem framing graphic showing plastic waste, product output, printing, and the material loop as one connected design challenge."
-          />
-          <figcaption>
-            The project begins by placing the product, printer, and waste stream in
-            one field of view, keeping design decisions connected to material consequences.
-          </figcaption>
-        </figure>
-      </section>
-
-      <section class="insight section-pad">
-        <div class="quote-panel reveal">
-          <p class="section-label">Insight</p>
-          <blockquote>
-            Waste is not the end of the process. It is local manufacturing material.
-          </blockquote>
-          <p>
-            That shift changed the project from a product-only exploration into a full
-            material pipeline: a system for recovering value before it leaves the studio.
-          </p>
-        </div>
-        <div class="story-board">
-          <figure class="media-card reveal">
-            <img
-              src="media/case-system-map.jpg"
-              alt="Early visual system graphic connecting a lamp, user, furniture, and recycling node."
-            />
-            <figcaption>
-              Early systems thinking mapped product, user, and recycling node as one
-              connected experience.
-            </figcaption>
-          </figure>
-          <figure class="media-card reveal delay-1">
-            <img
-              src="media/case-plastic-behavior.jpg"
-              alt="Material behavior study showing degradation, purity, reinforcement, and processing variables for recycled plastic."
-            />
-            <figcaption>
-              Material analysis clarified why clean inputs, controlled processing, and
-              repeatable settings matter when recycled plastic becomes product stock.
-            </figcaption>
-          </figure>
-          <figure class="media-card reveal delay-2">
-            <img
-              src="media/case-system-comparison.jpg"
-              alt="System comparison graphic contrasting distant recycling with a local PlastiVista manufacturing loop."
-            />
-            <figcaption>
-              The proposed system connected product, processor, and direct material
-              feedback into a smaller circular workflow.
-            </figcaption>
-          </figure>
-        </div>
-      </section>
-
-      <section class="system section-pad" id="system">
-        <div class="chapter-heading center reveal">
-          <span class="chapter-number">02</span>
-          <div>
-            <p class="section-label">System concept</p>
-            <h2>A local loop for circular production.</h2>
-            <p>
-              The core system maps a complete material path from collection to product
-              and back again. Each step is both a machine interaction and a design decision.
-            </p>
-          </div>
-        </div>
-
-        <div class="flow-diagram reveal delay-1" aria-label="Waste to shred to extrude to filament to print to product to reprocess">
-          <div class="flow-step">
-            <span>01</span>
-            <strong>Waste</strong>
-            <small>Failed prints, scraps, and plastic offcuts enter the loop.</small>
-          </div>
-          <div class="flow-step">
-            <span>02</span>
-            <strong>Shred</strong>
-            <small>Material is reduced into consistent flakes for processing.</small>
-          </div>
-          <div class="flow-step">
-            <span>03</span>
-            <strong>Extrude</strong>
-            <small>Flakes are heated, pushed, and stabilized into a continuous line.</small>
-          </div>
-          <div class="flow-step">
-            <span>04</span>
-            <strong>Filament</strong>
-            <small>Recycled material becomes printable stock for the studio.</small>
-          </div>
-          <div class="flow-step">
-            <span>05</span>
-            <strong>Print</strong>
-            <small>Parts, tests, and products move from CAD into physical form.</small>
-          </div>
-          <div class="flow-step">
-            <span>06</span>
-            <strong>Product</strong>
-            <small>Sol Seven Studios becomes the visible expression of the loop.</small>
-          </div>
-          <div class="flow-step">
-            <span>07</span>
-            <strong>Reprocess</strong>
-            <small>Offcuts and failed tests return to the beginning.</small>
-          </div>
-        </div>
-
-        <figure class="wide-media reveal delay-2">
-          <img
-            src="media/case-system-loop.jpg"
-            alt="Circular system diagram connecting waste, shredding, extrusion, filament, printing, product output, and reprocessing."
-          />
-          <figcaption>
-            The full loop connects material recovery, machine workflow, filament
-            production, printing, and designed output into one product ecosystem.
-          </figcaption>
-        </figure>
-
-        <div class="timeline reveal">
-          <article>
-            <span>Collect</span>
-            <p>Start with a controlled local stream so material quality is knowable.</p>
-          </article>
-          <article>
-            <span>Process</span>
-            <p>Shred and extrude with repeatable settings rather than one-off experiments.</p>
-          </article>
-          <article>
-            <span>Validate</span>
-            <p>Print samples, track failures, and feed the learning back into the system.</p>
-          </article>
-          <article>
-            <span>Express</span>
-            <p>Turn the material loop into products people can understand and keep.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="ideation section-pad" id="ideation">
-        <div class="chapter-heading reveal">
-          <span class="chapter-number">03</span>
-          <div>
-            <p class="section-label">Divergent exploration</p>
-            <h2>From product ideas to a circular manufacturing platform.</h2>
-            <p>
-              The early work tested multiple directions: product forms, service models,
-              reward systems, machine layouts, and exhibition formats. The project became
-              stronger when the focus moved from a single product to the infrastructure
-              that could make many products possible.
-            </p>
-          </div>
-        </div>
-
-        <div class="ideation-mosaic">
-          <figure class="media-card reveal">
-            <img
-              src="media/case-early-sketch-map.jpg"
-              alt="Early sketch exploration testing furniture forms, modular connections, and material-efficient structures."
-            />
-            <figcaption>
-              Early sketch exploration tested product typologies, modular forms, and
-              the first questions that led to the system architecture.
-            </figcaption>
-          </figure>
-          <figure class="media-card reveal delay-1">
-            <img
-              src="media/case-divergent-ideation.jpg"
-              alt="Ideation panel showing chair studies, system logic, and the move from single products toward repeatable structures."
-            />
-            <figcaption>
-              Divergent concepts helped separate what should become a product, what
-              should become equipment, and what should become the larger system.
-            </figcaption>
-          </figure>
-          <figure class="media-card reveal delay-2">
-            <img
-              src="media/case-design-direction.jpg"
-              alt="Design direction panel defining controlled geometry, visible material identity, modularity, and industrial restraint."
-            />
-            <figcaption>
-              Design criteria clarified the visual language: controlled geometry,
-              visible material identity, modularity, and industrial restraint.
-            </figcaption>
-          </figure>
-          <figure class="media-card reveal">
-            <img
-              src="media/case-early-filament-recycler.jpg"
-              alt="Early graphic concept for a compact filament recycler."
-            />
-            <figcaption>
-              A compact recycler concept helped define the machine as a designed object,
-              not only shop equipment.
-            </figcaption>
-          </figure>
-          <figure class="media-card reveal delay-1">
-            <img
-              src="media/case-exhibition-layout.jpg"
-              alt="Spatial layout study showing the circular journey from material input to product output."
-            />
-            <figcaption>
-              Spatial planning turned the system into a walkthrough, making each step
-              of the material loop understandable at a glance.
-            </figcaption>
-          </figure>
-        </div>
-
-        <div class="decision-grid">
-          <article class="decision-card reveal">
-            <span>Decision 01</span>
-            <h3>Prioritize the material loop.</h3>
-            <p>
-              The system needed to show how waste becomes stock, not simply claim that
-              a product is recycled.
-            </p>
-          </article>
-          <article class="decision-card reveal delay-1">
-            <span>Decision 02</span>
-            <h3>Make machines legible.</h3>
-            <p>
-              Shredding, heating, winding, and control had to feel visible enough for
-              viewers to understand the transformation.
-            </p>
-          </article>
-          <article class="decision-card reveal delay-2">
-            <span>Decision 03</span>
-            <h3>Let the product carry the proof.</h3>
-            <p>
-              Sol Seven Studios became the consumer-facing output, while PlastiVista
-              stayed focused on the infrastructure behind the material.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section class="hardware section-pad" id="hardware">
-        <div class="chapter-heading reveal">
-          <span class="chapter-number">04</span>
-          <div>
-            <p class="section-label">Hardware build</p>
-            <h2>Building the material pipeline from shredder to filament.</h2>
-            <p>
-              PlastiVista was developed through physical fabrication: metal hardware,
-              3D printed parts, machine enclosures, extrusion tests, wiring, and
-              shop-floor iteration. The project lives between industrial design language
-              and real fabrication constraints.
-            </p>
-          </div>
-        </div>
-
-        <figure class="wide-media reveal">
-          <img
-            src="media/case-production-system.jpg"
-            alt="Production system composition showing shredded plastic, recycled filament, printed components, and product output."
-          />
-          <figcaption>
-            The production system became the central story: waste, filament, printed
-            components, and product output arranged as one material sequence.
-          </figcaption>
-        </figure>
-
-        <div class="model-feature reveal" id="model">
-          <div class="model-copy">
-            <p class="section-label">Interactive shredder model</p>
-            <h3>The shredder is the first mechanical decision in the loop.</h3>
-            <p>
-              Before plastic can become filament, it has to become predictable feedstock.
-              The shredder reduces failed prints and scraps into flakes that can be
-              handled, sorted, stored, and sent into extrusion.
-            </p>
-            <p>
-              Orbit the model to inspect the material-processing package: housing,
-              motor placement, enclosure language, and access points that support the
-              larger pipeline.
-            </p>
-          </div>
-          <figure class="model-shell">
-            <div
-              class="model-stage"
-              data-shredder-viewer
-              data-model-src="media/shredder-system.glb"
-              aria-label="Interactive 3D model of the PlastiVista shredder"
-            >
-              <div class="model-status" data-model-status>Loading 3D shredder model</div>
-            </div>
-            <figcaption>
-              Interactive 3D model of the shredder, part of PlastiVista's material
-              processing system for turning plastic scraps into usable feedstock.
-            </figcaption>
-          </figure>
-        </div>
-
-        <figure class="wide-media reveal">
-          <img
-            src="media/case-fabrication-process.jpg"
-            alt="Hands-on fabrication process with electronics, fasteners, enclosure components, and control hardware on the workbench."
-          />
-          <figcaption>
-            Hands-on prototyping connected industrial design decisions to wiring,
-            enclosure assembly, service access, and real fabrication constraints.
-          </figcaption>
-        </figure>
-
-        <div class="build-sequence">
-          <figure class="media-card reveal">
-            <img
-              src="media/case-shredder-overview.jpg"
-              alt="Shredder overview showing the material-processing machine and its role in the circular production loop."
-            />
-            <figcaption>
-              The shredder became the first physical step in translating discarded
-              plastic into consistent, usable feedstock.
-            </figcaption>
-          </figure>
-          <figure class="media-card reveal delay-1">
-            <img
-              src="media/case-shredder-development.jpg"
-              alt="Shredder development showing fabrication steps, blade mounting, and enclosure assembly."
-            />
-            <figcaption>
-              Build iteration moved from layout studies to blade mounting, enclosure
-              assembly, and serviceable machine architecture.
-            </figcaption>
-          </figure>
-          <figure class="media-card reveal delay-2">
-            <img
-              src="media/case-shredder-final.jpg"
-              alt="Final shredder shown from multiple angles as a designed processing node."
-            />
-            <figcaption>
-              The completed shredder presents the processing node as a designed machine
-              with clear access, controls, and interaction points.
-            </figcaption>
-          </figure>
-        </div>
-
-        <div class="gallery-grid">
-          <figure class="media-card large reveal">
-            <img
-              src="media/finished-machine.jpg"
-              alt="Finished PlastiVista machine enclosure with touchscreen and orange handles."
-            />
-            <figcaption>
-              Finished enclosure integrating controls, ventilation, access, and a calmer
-              product-facing form.
-            </figcaption>
-          </figure>
-          <figure class="media-card reveal delay-1">
-            <img
-              src="media/shredder-body.jpg"
-              alt="Shredder housing and blade assembly mounted in a fabricated frame."
-            />
-            <figcaption>
-              Shredder assembly housed inside the fabrication frame before final closure.
-            </figcaption>
-          </figure>
-          <figure class="media-card reveal delay-2">
-            <img
-              src="media/extruder-table.jpg"
-              alt="Extrusion setup on a workbench with a filament spool, motor, and bench hardware."
-            />
-            <figcaption>
-              Extrusion and winding setup arranged for testing material flow and filament control.
-            </figcaption>
-          </figure>
-          <figure class="media-card reveal">
-            <img
-              src="media/hardware-components-layout.jpg"
-              alt="Shredder motor, control box, gears, fasteners, and hardware laid out on a white surface."
-            />
-            <figcaption>
-              Component layout used to understand the mechanical package, drive system,
-              and serviceable parts.
-            </figcaption>
-          </figure>
-          <figure class="media-card reveal delay-1">
-            <img
-              src="media/machine-enclosure-open.jpg"
-              alt="Open PlastiVista machine enclosure showing internal electronics and workspace."
-            />
-            <figcaption>
-              Interior access during fabrication, balancing serviceability with a cleaner exterior shell.
-            </figcaption>
-          </figure>
-        </div>
-      </section>
-
-      <section class="electronics section-pad" id="electronics">
-        <div class="section-copy reveal">
-          <span class="chapter-number">05</span>
-          <p class="section-label">Electronics and control</p>
-          <h2>The engineering layer makes the loop repeatable.</h2>
-          <p>
-            The system depends on control more than appearance. Motors, relays, power
-            delivery, heat control, switches, and interface decisions determine whether
-            material can be processed consistently enough to become product-grade stock.
-          </p>
-          <p>
-            This layer turns PlastiVista from a concept image into working infrastructure:
-            a machine that can be started, tuned, observed, repaired, and improved.
-          </p>
-          <div class="detail-list">
-            <article>
-              <span>Temperature logic</span>
-              <p>Heat and extrusion behavior are treated as a controlled material process.</p>
-            </article>
-            <article>
-              <span>Power and safety</span>
-              <p>Relays, switches, fans, and power routing shape the system's reliability.</p>
-            </article>
-            <article>
-              <span>Interface layer</span>
-              <p>A touchscreen and physical controls make the machine legible during use.</p>
-            </article>
-          </div>
-        </div>
-        <div class="control-grid">
-          <figure class="media-card reveal delay-1">
-            <img
-              src="media/case-extruder-overview.jpg"
-              alt="Extruder overview showing hopper, auger, heater, pulling system, and control components."
-            />
-            <figcaption>
-              The extruder translates shredded material into a continuous output
-              through heat, auger movement, and controlled pulling.
-            </figcaption>
-          </figure>
-          <figure class="media-card reveal delay-2">
-            <img
-              src="media/case-extruder-development.jpg"
-              alt="Extruder development showing mechanical layout, control wiring, and electronics assembly."
-            />
-            <figcaption>
-              Extruder development combined mechanical layout, control wiring, and
-              enclosure decisions into a more repeatable material process.
-            </figcaption>
-          </figure>
-          <figure class="media-card reveal">
-            <img
-              src="media/relay-starter-close.jpg"
-              alt="Close-up of relay and starter wiring inside the control system."
-            />
-            <figcaption>
-              Relay, starter, and power routing details inside the control box.
-            </figcaption>
-          </figure>
-          <figure class="media-card reveal delay-1">
-            <img
-              src="media/touchscreen-control.jpg"
-              alt="Touchscreen control interface mounted on the PlastiVista machine."
-            />
-            <figcaption>
-              Touchscreen control interface embedded into the machine body.
-            </figcaption>
-          </figure>
-        </div>
-      </section>
-
-      <section class="materials section-pad" id="materials">
-        <div class="chapter-heading reveal">
-          <span class="chapter-number">06</span>
-          <div>
-            <p class="section-label">Material testing</p>
-            <h2>Experiments, failed prints, and usable material.</h2>
-            <p>
-              The material story is intentionally process-driven. PlastiVista treats each
-              failed print, shred size, extrusion attempt, and print test as feedback for
-              the next pass through the loop.
-            </p>
-          </div>
-        </div>
-
-        <div class="testing-layout">
-          <figure class="media-card reveal">
-            <img
-              src="media/case-material-input.jpg"
-              alt="Failed prints, supports, and plastic scraps gathered as material input for the circular loop."
-            />
-            <figcaption>
-              Failed prints, supports, and scraps become the measurable starting point
-              for the loop.
-            </figcaption>
-          </figure>
-          <figure class="media-card reveal delay-1">
-            <img
-              src="media/case-material-processing.jpg"
-              alt="Material processing through shredding, sorting, and flake handling."
-            />
-            <figcaption>
-              Shredding and flake handling made the material easier to sort, observe,
-              and prepare for extrusion.
-            </figcaption>
-          </figure>
-          <figure class="media-card tall reveal delay-2">
-            <img
-              src="media/plastic-flakes-hand.jpg"
-              alt="Hand holding shredded plastic flakes above a bin of processed material."
-            />
-            <figcaption>
-              Shredded flakes make the waste stream measurable, handleable, and ready
-              for extrusion tests.
-            </figcaption>
-          </figure>
-          <figure class="media-card reveal">
-            <img
-              src="media/case-filament-to-print.jpg"
-              alt="Recycled filament on a spool beside a printed product test."
-            />
-            <figcaption>
-              Filament-to-print testing showed recycled stock returning to a physical
-              product trial.
-            </figcaption>
-          </figure>
-          <figure class="media-card reveal delay-1">
-            <img
-              src="media/recycled-print-test.jpg"
-              alt="Small black 3D printed chair test part made from recycled material."
-            />
-            <figcaption>
-              A print test showing recycled material returning to designed form.
-            </figcaption>
-          </figure>
-        </div>
-      </section>
-
-      <section class="sol-connection section-pad" id="sol">
-        <div class="callout reveal">
-          <p>PlastiVista powers the material loop behind Sol Seven Studios.</p>
-        </div>
-        <div class="split compact">
-          <div class="section-copy reveal">
-            <span class="chapter-number">07</span>
-            <p class="section-label">Product output</p>
-            <h2>Sol is the product-facing expression. PlastiVista is the infrastructure.</h2>
-            <p>
-              Sol Seven Studios focuses on lamps, modularity, product language, and
-              human factors. PlastiVista sits underneath that work as the circular
-              manufacturing system that makes the material story operational.
-            </p>
-            <p>
-              Together, they form a complete portfolio narrative: not only what the
-              product looks like, but how it can be made, remade, repaired, and returned
-              to a loop.
-            </p>
-          </div>
-          <div class="sol-visuals">
-            <figure class="media-card reveal delay-1">
-              <img
-                src="media/case-system-pillars.jpg"
-                alt="System diagram showing Sol Seven Studios, the PlastiVista recycler, and the public walkthrough as linked project outputs."
-              />
-              <figcaption>
-                The project was organized as three linked outputs: product, recycling
-                node, and public walkthrough.
-              </figcaption>
-            </figure>
-            <figure class="media-card reveal delay-2">
-              <img
-                src="media/case-sol-bridge.jpg"
-                alt="Diagram connecting PlastiVista and Sol Seven Studios through local circular manufacturing."
-              />
-              <figcaption>
-                The bridge between Sol and PlastiVista clarified which work was product
-                design and which work was manufacturing infrastructure.
-              </figcaption>
-            </figure>
-          </div>
-        </div>
-      </section>
-
-      <section class="digital-ecosystem section-pad" id="digital">
-        <div class="chapter-heading reveal">
-          <span class="chapter-number">08</span>
-          <div>
-            <p class="section-label">Digital Ecosystem + Market Testing</p>
-            <h2>Live prototypes connected the system to customers and adoption.</h2>
-            <p>
-              PlastiVista extends beyond hardware and material testing into a broader
-              product ecosystem. I built live digital prototypes to explore configuration,
-              customer education, market interest, and how a circular manufacturing
-              program could move from studio proof-of-concept toward public adoption.
-            </p>
-          </div>
-        </div>
-
-        <div class="digital-grid">
-          <article class="digital-card reveal">
-            <figure class="browser-mockup">
-              <div class="browser-chrome" aria-hidden="true">
-                <span></span>
-                <span></span>
-                <span></span>
-                <small>Sol Seven Studios configurator</small>
-              </div>
-              <img
-                src="media/digital-sol-seven-configurator.png"
-                alt="Live Sol Seven Studios configurator prototype showing modular lamp controls and product visualization."
-              />
-              <figcaption>
-                The configurator turns modular product logic into a customer-facing
-                exploration tool for shade, base, divider, and lighting combinations.
-              </figcaption>
-            </figure>
-            <div class="digital-copy">
-              <p class="section-label">Sol Seven Studios Storefront + Configurator</p>
-              <h3>Product-facing prototype for modular exploration.</h3>
-              <p>
-                Sol Seven Studios was developed as the product-facing side of the system.
-                The live storefront prototype explores how customers could browse,
-                understand, and configure modular lamp combinations before purchase.
-              </p>
-              <ul class="skill-tags" aria-label="Skills demonstrated">
-                <li>Modular product configuration</li>
-                <li>E-commerce UX</li>
-                <li>Product visualization</li>
-                <li>Customer-facing storytelling</li>
-                <li>Design system development</li>
-              </ul>
-              <a
-                class="prototype-link"
-                href="https://ethansol7.github.io/SolSevenStudios/#home"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Open Sol Seven Studios Prototype
+        <div class="project-views">
+          <div class="project-view" id="panel-study" role="tabpanel" aria-labelledby="tab-study" tabindex="0">
+            <figure>
+              <a class="image-button machine-image study" href="image.html?view=study" data-image="assets/shredder-study.webp" target="_blank" rel="noopener" data-enlarge aria-label="Enlarge the shredder design study">
+                <img src="assets/shredder-study.webp" width="1200" height="1477" loading="lazy" alt="Book visualization of the white shredder enclosure, its motor housing and collection tray.">
+                <span class="enlarge-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 4H4v5m11-5h5v5M4 15v5h5m11-5v5h-5"/></svg>Enlarge image</span>
               </a>
-            </div>
-          </article>
 
-          <article class="digital-card reveal delay-1">
-            <figure class="browser-mockup">
-              <div class="browser-chrome" aria-hidden="true">
-                <span></span>
-                <span></span>
-                <span></span>
-                <small>PlastiVista system platform</small>
-              </div>
-              <img
-                src="media/digital-plastivista-system.png"
-                alt="Live PlastiVista system site showing the circular manufacturing platform and waitlist path."
-              />
-              <figcaption>
-                The public-facing system site explains the circular manufacturing program
-                and creates a path for businesses, schools, and communities to show interest.
-              </figcaption>
             </figure>
-            <div class="digital-copy">
-              <p class="section-label">PlastiVista System Site + Waitlist</p>
-              <h3>Market-ready communication for a circular production model.</h3>
-              <p>
-                The PlastiVista site translates the circular manufacturing system into a
-                public-facing platform, using a working waitlist to measure interest from
-                businesses and communities that could participate in local material recovery.
-              </p>
-              <ul class="skill-tags" aria-label="Skills demonstrated">
-                <li>Market validation</li>
-                <li>Public system communication</li>
-                <li>Circular manufacturing strategy</li>
-                <li>Community onboarding</li>
-                <li>Interest capture</li>
-              </ul>
-              <a
-                class="prototype-link"
-                href="https://ethansol7.github.io/plasti-vista-site/sol/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Open PlastiVista System Site
-              </a>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="vision section-pad" id="vision">
-        <div class="vision-panel reveal">
-          <div>
-            <span class="chapter-number">09</span>
-            <p class="section-label">Final outcome and vision</p>
-            <h2>Distributed local circular manufacturing.</h2>
-            <p>
-              PlastiVista proposes a scalable model for studios, schools, and small
-              manufacturers that want more control over their material loop. The value
-              is not only environmental. It is creative, educational, and infrastructural:
-              design decisions become connected to material consequences.
-            </p>
-            <p>
-              The project closes the distance between design, engineering, and fabrication.
-              It shows that circularity can be built into the workflow, not added as a
-              claim after the product is finished.
-            </p>
           </div>
-          <figure>
-            <img
-              src="media/case-distributed-vision.jpg"
-              alt="Distributed circular manufacturing vision showing local production nodes and designed product outputs."
-            />
-          </figure>
+          <div class="project-view" id="panel-built" role="tabpanel" aria-labelledby="tab-built" tabindex="0" hidden>
+            <figure>
+              <a class="image-button machine-image" href="image.html?view=built" data-image="assets/shredder-built.webp" target="_blank" rel="noopener" data-enlarge aria-label="Enlarge the built shredder prototype">
+                <img src="assets/shredder-built.webp" width="1125" height="2000" loading="lazy" alt="The assembled white shredder prototype with orange handles, a front control panel and a collection bin below.">
+                <span class="enlarge-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 4H4v5m11-5h5v5M4 15v5h5m11-5v5h-5"/></svg>Enlarge image</span>
+              </a>
+            </figure>
+          </div>
+          <div class="project-view" id="panel-open" role="tabpanel" aria-labelledby="tab-open" tabindex="0" hidden>
+            <figure>
+              <a class="image-button machine-image" href="image.html?view=open" data-image="assets/shredder-open.webp" target="_blank" rel="noopener" data-enlarge aria-label="Enlarge the open enclosure photograph">
+                <img src="assets/shredder-open.webp" width="1125" height="2000" loading="lazy" alt="The shredder with its front panel open, exposing the wiring and internal mechanical assembly.">
+                <span class="enlarge-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 4H4v5m11-5h5v5M4 15v5h5m11-5v5h-5"/></svg>Enlarge image</span>
+              </a>
+            </figure>
+          </div>
         </div>
-        <div class="future-grid">
-          <figure class="media-card reveal">
-            <img
-              src="media/case-system-strategy.jpg"
-              alt="System strategy graphic showing local production nodes recovering material and producing designed products."
-            />
-            <figcaption>
-              Local nodes recover, process, and output products without separating
-              material value from design value.
-            </figcaption>
-          </figure>
-          <figure class="media-card reveal delay-1">
-            <img
-              src="media/case-distributed-local-system.jpg"
-              alt="System diagram comparing centralized waste processing with distributed local manufacturing."
-            />
-            <figcaption>
-              The distributed model places material recovery closer to where waste is
-              created and where products are used.
-            </figcaption>
-          </figure>
-          <figure class="media-card reveal delay-2">
-            <img
-              src="media/case-final-exhibition.jpg"
-              alt="Final setup showing PlastiVista material infrastructure beside Sol Seven Studios product output."
-            />
-            <figcaption>
-              The final setup placed the material infrastructure beside the product
-              studio it supports.
-            </figcaption>
-          </figure>
-        </div>
-      </section>
-    </main>
-
-    <button class="sound-toggle" type="button" data-sound-toggle aria-pressed="false">
-      <span class="sound-indicator" aria-hidden="true"></span>
-      <span data-sound-label>Sound On</span>
-    </button>
-
-    <div
-      class="lightbox"
-      data-lightbox
-      role="dialog"
-      aria-modal="true"
-      aria-label="Image viewer"
-      aria-hidden="true"
-      hidden
-    >
-      <button class="lightbox-close" type="button" data-lightbox-close aria-label="Close image viewer">
-        X
-      </button>
-      <button class="lightbox-nav lightbox-prev" type="button" data-lightbox-prev aria-label="Previous image">
-        &lt;
-      </button>
-      <div class="lightbox-stage" data-lightbox-stage>
-        <figure class="lightbox-figure">
-          <img data-lightbox-image alt="" />
-          <figcaption data-lightbox-caption hidden></figcaption>
-        </figure>
       </div>
-      <button class="lightbox-nav lightbox-next" type="button" data-lightbox-next aria-label="Next image">
-        &gt;
-      </button>
+    </section>
+
+<section class="chapter wrap" id="extruder" aria-labelledby="extruder-title">
+  <div class="section-head"><h2 id="extruder-title">The extruder</h2><div class="chapter-copy"><p>I adapted an existing compact extrusion design for shredded plastic, combining purchased hardware with printed parts. I assembled the drivetrain and heating system, then integrated the wiring and controls.</p></div></div>
+  <div class="extruder-layout">
+    <div class="extruder-gallery">
+      <div class="project-views">
+        <div class="project-view" role="tabpanel" id="panel-extruder-machine" aria-labelledby="tab-extruder-machine" tabindex="0" ><figure><a class="image-button extruder-image" href="image.html?view=extruder" data-image="assets/extruder.webp" target="_blank" rel="noopener" data-enlarge aria-label="Enlarge image: The assembled extruder and filament pulling setup on the workbench."><img src="assets/extruder.webp" loading="lazy" decoding="async" alt="The assembled extruder and filament pulling setup on the workbench."><span class="enlarge-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 4H4v5m11-5h5v5M4 15v5h5m11-5v5h-5"/></svg>Enlarge image</span></a></figure></div>
+        <div class="project-view" role="tabpanel" id="panel-extruder-assembly" aria-labelledby="tab-extruder-assembly" tabindex="0" hidden><figure><a class="image-button extruder-image" href="image.html?view=extruder-build" data-image="assets/extruder-build.webp" target="_blank" rel="noopener" data-enlarge aria-label="Enlarge image: Ethan assembling and wiring the extruder on a workshop bench."><img src="assets/extruder-build.webp" loading="lazy" decoding="async" alt="Ethan assembling and wiring the extruder on a workshop bench."><span class="enlarge-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 4H4v5m11-5h5v5M4 15v5h5m11-5v5h-5"/></svg>Enlarge image</span></a></figure></div>
+        <div class="project-view" role="tabpanel" id="panel-extruder-electronics" aria-labelledby="tab-extruder-electronics" tabindex="0" hidden><figure><a class="image-button extruder-image" href="image.html?view=extruder-electronics" data-image="assets/extruder-electronics.webp" target="_blank" rel="noopener" data-enlarge aria-label="Enlarge image: The extruder electronics and wiring before the enclosure was closed."><img src="assets/extruder-electronics.webp" loading="lazy" decoding="async" alt="The extruder electronics and wiring before the enclosure was closed."><span class="enlarge-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 4H4v5m11-5h5v5M4 15v5h5m11-5v5h-5"/></svg>Enlarge image</span></a></figure></div>
+        <div class="project-view" role="tabpanel" id="panel-extruder-video" aria-labelledby="tab-extruder-video" tabindex="0" hidden><div class="video-frame"><video id="extrusion-video" controls muted playsinline preload="none" tabindex="0" poster="assets/extrusion-poster.jpg" aria-label="Extruder bench test"><source src="assets/extrusion-test.mp4" type="video/mp4"></video><button class="video-start" type="button" data-play="extrusion-video"><span aria-hidden="true">▶</span> Play extrusion test</button></div></div>
+      </div>
+      <div class="view-selector" role="tablist" aria-label="Extruder views" aria-orientation="horizontal"><button type="button" role="tab" id="tab-extruder-machine" aria-controls="panel-extruder-machine" aria-selected="true" tabindex="0"><img src="assets/extruder.webp" width="120" height="84" alt="" loading="lazy"><span>Machine</span></button><button type="button" role="tab" id="tab-extruder-assembly" aria-controls="panel-extruder-assembly" aria-selected="false" tabindex="-1"><img src="assets/extruder-build.webp" width="120" height="84" alt="" loading="lazy"><span>Assembly</span></button><button type="button" role="tab" id="tab-extruder-electronics" aria-controls="panel-extruder-electronics" aria-selected="false" tabindex="-1"><img src="assets/extruder-electronics.webp" width="120" height="84" alt="" loading="lazy"><span>Electronics</span></button><button type="button" role="tab" id="tab-extruder-video" aria-controls="panel-extruder-video" aria-selected="false" tabindex="-1"><img src="assets/extrusion-poster.jpg" width="120" height="84" alt="" loading="lazy"><span>Watch test</span></button></div>
     </div>
-
-    <footer class="site-footer">
-      <div>
-        <img src="media/plastivista-mark.png" alt="" />
-        <div>
-          <p>Design the product. Build the system. Fully circular.</p>
-          <p class="footer-legal">&copy; Sol Seven Studios. Patent Pending.</p>
-        </div>
-      </div>
-      <a href="#top">Back to top</a>
-    </footer>
-
-    <script type="importmap">
-      {
-        "imports": {
-          "three": "https://unpkg.com/three@0.164.1/build/three.module.js",
-          "three/addons/": "https://unpkg.com/three@0.164.1/examples/jsm/"
-        }
-      }
-    </script>
-    <script src="main.js"></script>
-    <script src="audio-journey.js"></script>
-    <script type="module" src="shredder-viewer.js"></script>
-  </body>
-</html>
+    <div class="extruder-controls"><p>Producing usable filament meant balancing three variables as the material moved through the machine.</p><dl>
+      <div><dt>Temperature</dt><dd>The heated barrel melts the plastic before it reaches the nozzle.</dd></div>
+      <div><dt>Auger speed</dt><dd>The rotating auger moves material through the barrel and controls the feed rate.</dd></div>
+      <div><dt>Pull speed</dt><dd>The motorized rollers draw out the filament. The pull rate has to match the extrusion rate to control its diameter.</dd></div>
+    </dl></div>
+  </div>
+</section>
+<section class="chapter wrap" id="first-print" aria-labelledby="print-title">
+  <div class="section-head"><h2 id="print-title">The first<br> recycled print</h2><div class="chapter-copy"><p>On April 11, 2026, I completed the first successful print made entirely from the recovered filament: a small chair test. The material came from Fab Lab waste and discarded student prints.</p><p>Making the filament diameter consistent over longer runs is the next development goal.</p></div></div>
+  <div class="proof-images"><figure><a class="image-button filament-image" href="image.html?view=filament" data-image="assets/filament.webp" target="_blank" rel="noopener" data-enlarge aria-label="Enlarge image: A spool of recovered plastic filament."><img src="assets/filament.webp" loading="lazy" decoding="async" alt="A spool of recovered plastic filament."><span class="enlarge-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 4H4v5m11-5h5v5M4 15v5h5m11-5v5h-5"/></svg>Enlarge image</span></a></figure><figure><a class="image-button print-image" href="image.html?view=first-print" data-image="assets/first-print.webp" target="_blank" rel="noopener" data-enlarge aria-label="Enlarge image: The small black chair test printed from recovered filament on April 11, 2026."><img src="assets/first-print.webp" loading="lazy" decoding="async" alt="The small black chair test printed from recovered filament on April 11, 2026."><span class="enlarge-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 4H4v5m11-5h5v5M4 15v5h5m11-5v5h-5"/></svg>Enlarge image</span></a></figure></div>
+</section>
+<section class="chapter wrap" id="sol" aria-labelledby="sol-title">
+  <div class="product-layout">
+    <div class="project-views">
+      <div class="project-view" role="tabpanel" id="panel-sol-arrangement" aria-labelledby="tab-sol-arrangement" tabindex="0" ><figure><a class="image-button product-image" href="image.html?view=sol-collection" data-image="assets/sol-collection.webp" target="_blank" rel="noopener" data-enlarge aria-label="Enlarge image: Illuminated modular Sol lamps arranged beside a printed chair in a room."><img src="assets/sol-collection.webp" loading="lazy" decoding="async" alt="Illuminated modular Sol lamps arranged beside a printed chair in a room."><span class="enlarge-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 4H4v5m11-5h5v5M4 15v5h5m11-5v5h-5"/></svg>Enlarge image</span></a></figure></div>
+      <div class="project-view" role="tabpanel" id="panel-sol-stacking" aria-labelledby="tab-sol-stacking" tabindex="0" hidden><figure><a class="image-button product-image" href="image.html?view=sol-tower" data-image="assets/sol-tower.webp" target="_blank" rel="noopener" data-enlarge aria-label="Enlarge image: Sol lighting modules arranged into a tall illuminated stack."><img src="assets/sol-tower.webp" loading="lazy" decoding="async" alt="Sol lighting modules arranged into a tall illuminated stack."><span class="enlarge-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 4H4v5m11-5h5v5M4 15v5h5m11-5v5h-5"/></svg>Enlarge image</span></a></figure></div>
+      <div class="project-view" role="tabpanel" id="panel-sol-connection" aria-labelledby="tab-sol-connection" tabindex="0" hidden><figure><a class="image-button product-image" href="image.html?view=sol-connection" data-image="assets/sol-connection.webp" target="_blank" rel="noopener" data-enlarge aria-label="Enlarge image: A Sol X connection component showing the magnetic interface and electrical wiring."><img src="assets/sol-connection.webp" loading="lazy" decoding="async" alt="A Sol X connection component showing the magnetic interface and electrical wiring."><span class="enlarge-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 4H4v5m11-5h5v5M4 15v5h5m11-5v5h-5"/></svg>Enlarge image</span></a></figure></div>
+    </div>
+    <div class="product-copy"><h2 id="sol-title">Sol and Sol X</h2><p class="section-intro">Alongside the material system, I developed modular lighting built around interchangeable bases, shades and dividers. A shared magnetic interface lets the same parts form different arrangements.</p><p class="section-intro">Sol X extends the idea with pogo pin contacts that pass power between modules from a single base.</p>
+      <div class="view-selector" role="tablist" aria-label="Sol views" aria-orientation="horizontal"><button type="button" role="tab" id="tab-sol-arrangement" aria-controls="panel-sol-arrangement" aria-selected="true" tabindex="0"><img src="assets/sol-collection.webp" width="120" height="84" alt="" loading="lazy"><span>Lamps</span></button><button type="button" role="tab" id="tab-sol-stacking" aria-controls="panel-sol-stacking" aria-selected="false" tabindex="-1"><img src="assets/sol-tower.webp" width="120" height="84" alt="" loading="lazy"><span>Stacking</span></button><button type="button" role="tab" id="tab-sol-connection" aria-controls="panel-sol-connection" aria-selected="false" tabindex="-1"><img src="assets/sol-connection.webp" width="120" height="84" alt="" loading="lazy"><span>Connection</span></button></div>
+      <details class="technical-details"><summary>How the connection evolved</summary><div class="detail-content"><p>I tested a press fit, a slot and twist connection, and a three magnet arrangement before moving to five magnets. The change improved alignment and made the interface more repeatable.</p><p>Sol X adds electrical contacts to the shared connection, reducing the number of power cords needed for a stack.</p><figure><a class="image-button detail-image" href="image.html?view=sol-assembly" data-image="assets/sol-assembly.webp" target="_blank" rel="noopener" data-enlarge aria-label="Enlarge image: Ethan assembling an amber Sol lighting module."><img src="assets/sol-assembly.webp" loading="lazy" decoding="async" alt="Ethan assembling an amber Sol lighting module."><span class="enlarge-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 4H4v5m11-5h5v5M4 15v5h5m11-5v5h-5"/></svg>Enlarge image</span></a></figure></div></details>
+    </div>
+  </div>
+</section>
+<section class="chapter wrap" id="digital" aria-labelledby="digital-title">
+  <div class="section-head"><h2 id="digital-title">Digital prototypes</h2><div class="chapter-copy"><p>I also built interfaces for exploring the products and explaining the proposed manufacturing service.</p></div></div>
+  <div class="digital-grid">
+    <article><a class="prototype-image" href="https://solsevenstudios.com/solx-configurator" target="_blank" rel="noopener" aria-label="Open the Sol Seven Studios prototype"><img src="assets/configurator.webp" width="1574" height="900" loading="lazy" alt="The Sol Seven Studios lamp configurator interface."><span>Open prototype ↗</span></a><h3><a href="https://solsevenstudios.com/solx-configurator" target="_blank" rel="noopener">Sol Seven Studios <span aria-hidden="true">↗</span></a></h3><p>A storefront and configurator for exploring combinations of lamp bases, shades and dividers.</p></article>
+    <article><a class="prototype-image" href="https://ethansol7.github.io/plasti-vista-site/system/" target="_blank" rel="noopener" aria-label="Open the PlastiVista system prototype"><img src="assets/system-site.webp" width="1574" height="900" loading="lazy" alt="The PlastiVista website introducing the local manufacturing system."><span>Open prototype ↗</span></a><h3><a href="https://ethansol7.github.io/plasti-vista-site/system/" target="_blank" rel="noopener">PlastiVista <span aria-hidden="true">↗</span></a></h3><p>A public introduction to the material system, with a waitlist for potential participants.</p></article>
+  </div>
+</section>
+<section class="chapter closing wrap" id="next" aria-labelledby="next-title"><div class="section-head"><h2 id="next-title">Next steps</h2><div class="chapter-copy"><p>The next phase is to standardize processing for PLA and PETG, validate material consistency and develop the lighting system further. The larger ambition is a network of small local workshops that recover and use material close to its source.</p><a class="action-link" href="technical.html#hardware" target="_blank" rel="noopener">Open the full technical record <span aria-hidden="true">↗</span></a></div></div></section>  </main><footer class="wrap"><a href="#top">Back to top ↑</a></footer>
+  <dialog class="image-viewer" aria-label="Image viewer"><button class="close-viewer" type="button" autofocus>Close <span aria-hidden="true">×</span></button><img alt=""></dialog>
+</body></html>

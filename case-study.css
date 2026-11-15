@@ -1,0 +1,82 @@
+.is-embedded{scroll-behavior:auto}
+.section-links{justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-top:14px}
+.section-links a{display:inline-flex;align-items:center;justify-content:space-between;gap:22px;min-height:44px;font-size:14px;font-weight:700}
+.section-links a:hover{color:var(--accent)}
+.chapter{margin-top:104px;scroll-margin-top:30px}
+.section-head{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(44px,7vw,108px);align-items:start;border-top:1px solid var(--ink);padding-top:50px;margin-bottom:38px}
+.chapter-copy{font-size:20px;line-height:1.5;max-width:54ch}
+.chapter-copy p+p{margin-top:22px}
+.chapter-copy .text-link{margin-top:16px;font-size:14px}
+.material-images{display:grid;grid-template-columns:1.4fr .6fr;gap:24px}
+.material-images .image-button{height:520px}
+.waste-image img{object-fit:contain}
+.flakes-image img{object-position:center 60%}
+.material-note{max-width:58ch;margin-top:24px;margin-left:auto;font-size:17px;line-height:1.5}
+.technical-details{margin-top:28px;border-block:1px solid var(--line);font-size:16px}
+.technical-details summary{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:56px;padding-block:12px;cursor:pointer;font-weight:700;list-style:none;text-decoration:underline;text-underline-offset:5px}
+.technical-details summary::-webkit-details-marker{display:none}
+.technical-details summary::after{content:'+';font-size:26px;font-weight:400;text-decoration:none}
+.technical-details[open] summary::after{content:'−'}
+.technical-details summary:hover{color:var(--accent)}
+.technical-details summary:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
+.detail-content{padding-block:6px 24px}
+.detail-content p{margin-top:20px}
+.detail-content>a{display:inline-flex;align-items:center;min-height:44px;gap:15px;margin-top:10px;font-size:14px}
+.detail-image{aspect-ratio:4/3;margin-block:12px}
+.detail-image img{object-fit:contain}
+.extruder-layout{display:grid;grid-template-columns:1.35fr .65fr;gap:clamp(36px,5vw,80px);align-items:start}
+.extruder-image,.video-frame{aspect-ratio:16/10}
+.extruder-image img{object-fit:contain}
+.extruder-gallery .view-selector{grid-template-columns:repeat(4,minmax(0,1fr));margin-top:18px}
+.extruder-controls{font-size:17px;line-height:1.5;padding-top:6px}
+.extruder-controls>p{max-width:32ch}
+.extruder-controls dl{margin:30px 0 0}
+.extruder-controls dl>div{border-top:1px solid var(--line);padding-block:18px}
+.extruder-controls dt{font-size:18px;font-weight:700}
+.extruder-controls dd{margin:7px 0 0;font-size:16px}
+.video-frame{position:relative;background:#161715;overflow:hidden}
+.video-frame video{display:block;width:100%;height:100%;object-fit:contain}
+.video-start{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);display:flex;align-items:center;gap:16px;min-height:52px;max-width:90%;padding:14px 20px;border:1px solid #171817;background:white;color:#171817;font-size:15px;font-weight:700;white-space:nowrap}
+.video-start:hover{background:#171817;color:white;border-color:white}
+.video-start[hidden]{display:none}
+.proof-images{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.proof-images .image-button{height:610px}
+.proof-images img{object-fit:contain}
+.filament-image{background:#fff}
+.proof-images .filament-image img{transform:scale(1.5)}
+.product-layout{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(36px,6vw,96px);border-top:1px solid var(--ink);padding-top:50px;align-items:start}
+.product-image{height:auto;aspect-ratio:4/3;background:#fff}
+.product-layout #panel-sol-arrangement .product-image{aspect-ratio:16/9}
+.product-layout #panel-sol-stacking .product-image{aspect-ratio:4/5}
+.product-image img{object-fit:contain}
+.product-copy .section-intro{max-width:40ch}
+.product-copy .view-selector{margin-top:30px}
+.digital-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px}
+.prototype-image{display:block;position:relative;aspect-ratio:1574/900;overflow:hidden;background:#f0f0ed;border:1px solid var(--line)}
+.prototype-image img{display:block;width:100%;height:100%;object-fit:contain;transition:transform .22s}
+.prototype-image>span{position:absolute;bottom:16px;right:16px;background:#fff;color:#171817;border:1px solid #171817;min-height:44px;padding:11px 16px;font-size:13px;font-weight:700}
+.prototype-image:hover>span{background:#171817;color:white}
+.prototype-image:hover img{transform:scale(1.015)}
+.digital-grid h3{font-family:var(--display);font-size:28px;letter-spacing:-.025em;margin:24px 0 14px;line-height:1.2}
+.digital-grid h3 a{display:inline-flex;align-items:center;gap:18px;min-height:44px;text-decoration-thickness:1px;text-underline-offset:7px}
+.digital-grid h3 span{font-size:20px;font-weight:400}
+.digital-grid p{font-size:17px;line-height:1.5;max-width:45ch}
+.closing .action-link{margin-top:28px}
+.closing .section-head{margin-bottom:0}
+.image-viewer>img{height:calc(100dvh - 95px)}
+@media(max-width:1050px){
+ .chapter{margin-top:80px}.section-head{gap:40px;grid-template-columns:.9fr 1.1fr;padding-top:38px}.chapter-copy{font-size:18px}.material-images .image-button{height:400px}.extruder-layout{grid-template-columns:1fr;gap:32px}.extruder-controls>p{max-width:50ch}.extruder-controls dl{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:20px}.extruder-gallery .view-selector{max-width:650px}.proof-images .image-button{height:480px}.product-layout{grid-template-columns:1fr 1fr;gap:32px}.product-image{height:auto}.digital-grid{gap:26px}.digital-grid h3{font-size:25px}
+}
+@media(max-width:760px){
+ .section-links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:20px;row-gap:4px}.section-links a{font-size:13px;gap:8px}.chapter{margin-top:68px;scroll-margin-top:24px}.section-head{grid-template-columns:1fr;gap:24px;padding-top:30px;margin-bottom:26px}.chapter-copy{font-size:18px;max-width:46ch}.material-images{gap:14px;grid-template-columns:1.2fr .8fr}.material-images .image-button{height:360px}.material-images .enlarge-mark{font-size:0;gap:0;padding:10px;min-width:44px;justify-content:center}.material-images .enlarge-mark svg{width:20px;height:20px}.material-note{font-size:17px;margin-top:20px;margin-left:0}.technical-details{order:5;margin-top:4px;width:100%}.shredder .technical-details{grid-column:1}.extruder-image,.video-frame{aspect-ratio:4/3}.extruder-gallery .view-selector{grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.extruder-gallery .view-selector img{height:66px}.extruder-gallery .view-selector span{padding-inline:7px;font-size:12px}.extruder-controls dl{grid-template-columns:1fr;gap:0;margin-top:22px}.extruder-controls dl>div{display:grid;grid-template-columns:105px 1fr;gap:22px;padding-block:17px}.extruder-controls dt{font-size:16px}.extruder-controls dd{margin:0;font-size:16px}.proof-images{gap:14px}.proof-images .image-button{height:380px}.proof-images .enlarge-mark{font-size:0;gap:0;padding:10px;min-width:44px;justify-content:center}.proof-images .enlarge-mark svg{width:20px;height:20px}.product-layout{grid-template-columns:1fr;gap:26px;padding-top:30px}.product-copy{display:contents}.product-copy h2{order:0}.product-copy .section-intro{order:1;margin:0;max-width:44ch}.product-copy .view-selector{order:2;margin-top:0}.product-layout>.project-views{order:3}.product-copy .technical-details{order:4}.product-image{height:auto;aspect-ratio:4/3}.digital-grid{grid-template-columns:1fr;gap:42px}.digital-grid h3{font-size:27px;margin-top:18px}.digital-grid p{font-size:17px}.closing .action-link{margin-top:24px}.image-viewer>img{max-height:calc(100dvh - 95px)}
+}
+@media(max-width:450px){
+ .section-links{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:24px}.material-images .image-button{height:270px}.material-images .enlarge-mark,.proof-images .enlarge-mark{bottom:10px;right:10px}.extruder-gallery .view-selector{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.extruder-gallery .view-selector img{height:78px}.proof-images{grid-template-columns:1fr}.proof-images .image-button{height:auto}.proof-images .filament-image{aspect-ratio:4/3}.proof-images .print-image{aspect-ratio:4/5}.proof-images .enlarge-mark{font-size:12px;gap:8px;padding:10px 12px}.video-start{font-size:14px;gap:12px;padding-inline:15px}.extruder-controls dl>div{grid-template-columns:95px 1fr;gap:18px}
+}
+
+@media(max-width:600px){
+ .material-images{grid-template-columns:1fr;gap:18px}.material-images .image-button{height:auto}.material-images .waste-image{aspect-ratio:16/9}.material-images .flakes-image{aspect-ratio:4/5}.material-images .enlarge-mark{font-size:12px;gap:8px;padding:10px 12px}
+}
+@media(max-width:450px){
+ .product-image .enlarge-mark{font-size:0;gap:0;padding:10px;min-width:44px;justify-content:center}.product-image .enlarge-mark svg{width:20px;height:20px}
+}

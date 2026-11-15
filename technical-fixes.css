@@ -1,0 +1,17 @@
+/* Keep process names sized for their cards, independent of display typography. */
+.flow-diagram { grid-template-columns:repeat(7,minmax(0,1fr)); gap:12px }
+.flow-step { min-width:0; min-height:225px; padding:18px 15px; border-radius:10px }
+.flow-step strong { font-size:clamp(17px,1.45vw,23px); font-weight:700; line-height:1.15; letter-spacing:-.025em; overflow-wrap:normal; margin-top:22px }
+.flow-step small { font-size:14px; line-height:1.5 }
+.technical-return { display:block; padding:20px 5%; text-decoration:underline; background:#fff; color:#171817 }
+.is-dark { --forest:#eeeade; --forest-soft:#c7c9c1; --stone:#b9bfb6; --stone-soft:#b9bfb6; --sage-strong:#d8c58f; --line:#454d45; --line-strong:#686f62; --paper:#1a2020; --paper-solid:#202626; --page:#101314; --page-deep:#151b1b; --warm:#202526 }
+.is-dark::before { display:none }
+.is-dark .section-pad,.is-dark .site-footer,.is-dark .site-header { background:transparent }
+.is-dark .flow-step,.is-dark .info-card,.is-dark .control-card,.is-dark .decision-card { background:#1b2121eb }
+.is-dark .media-card,.is-dark .vision-panel,.is-dark .quote-panel,.is-dark .model-shell,.is-dark .callout,.is-dark .digital-card,.is-dark .problem-solution article,.is-dark .timeline article,.is-dark .detail-list article,.is-dark .hero-facts span,.is-dark .patent-note,.is-dark .chapter-number,.is-dark .skill-tags li,.is-dark .browser-chrome,.is-dark .browser-url { background:#1b2121eb }
+.is-dark .prototype-link { color:#171817 }
+.is-dark .prototype-link:hover { color:white }
+.is-dark .lightbox-close,.is-dark .lightbox-nav,.is-dark .model-status { color:#193d2b }
+.is-dark .technical-return { background:#151a1a; color:#eeeade }
+@media(max-width:1200px) and (min-width:761px) { .flow-diagram { grid-template-columns:repeat(4,minmax(0,1fr)) }.flow-step strong{font-size:22px}.flow-step::after{display:none} }
+@media(max-width:760px) { .flow-diagram { grid-template-columns:1fr; gap:0 }.flow-step{display:grid;grid-template-columns:42px 1fr;column-gap:18px;min-height:0;padding:22px 0;border:0;border-top:1px solid var(--line);border-radius:0;background:transparent!important}.flow-step span{grid-row:span 2}.flow-step strong{font-size:23px;margin:0}.flow-step small{grid-column:2;margin-top:8px;max-width:40ch}.flow-step::after{display:none} }
