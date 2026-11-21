@@ -18,8 +18,9 @@
   if(window.self!==window.top){
     document.documentElement.classList.add('is-embedded');
     const header=document.querySelector('.masthead,.site-header');
-    if(header)header.after(controls);
+    if(header)header.append(controls);
   }
+  if(window.self===window.top)document.querySelector('.masthead')?.append(controls);
   const motion = controls.querySelector('.ambient-motion');
   const theme = controls.querySelector('.ambient-theme');
   const play = controls.querySelector('.ambient-play');
